@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<header>
+	<h1>Lab 1. Introducción a las aplicaciones web, HTML5 y ciclo de vida de los sistemas de información</h1>
+	<p>María de los Ángeles Contreras Anaya</p>
+	<p>A01700284</p>
+	<p>A01700284@itesm.mx</p>
+</header>
+<nav>
+	<ol>
+		<li> <p>MIS HOBBIES </p>
+		<li> <p>TECNOLOGÍAS PARA DESARROLLO WEB</p>
+		<li> <p>PREGUNTAS Y RESPUESTAS </p>
+	</ol>
+</nav>
+<section>
+	<article>
+		<header>
+			<h3>MIS HOBBIES</h3>
+		</header>
+		<p id="first">Lo que más me gusta hacer cuando tengo tiempo libre es cualquier cosa que tenga que ver con ejercicio, en este momento mi deporte favorito es la natación. Este es mi tercer semestre que meto natación como actividad formativa y tengo varios retos por cumplir antes de que acabe el ciclo escolar. Solía nadar en el carril 1 (principiantes) ahora ya estoy en el carril 4 y lo único que me falta perfeccionar es la vuelta de campana y el estilo mariposa.</p>
+		<figure>
+		<img src="swim.jpg"/>
+		<figcaption> 1. Mi pasatiempo favorito del momento</figcaption>
+		</figure>
+		<p id="second">Empecé a escalar hace 3 años y hasta la fecha, la escalada ha sido uno de los deportes que más trabajo me ha costado aprender. La magnitud de la fuerza que es necesaria para hacer rutas es increíble. En ciertas rutas llegaba un punto en el que me frustraba pero tuve que aprender a ser resiliente y sobre todo superar mi miedo a las alturas. La verdad es uno de los deportes que más felcidad me brinda.</p>
+		<figure>
+		<img src="boulder.jpg"/>
+		<figcaption> 2. El deporte que me ha retado en el aspecto físico</figcaption>
+		</figure>
+		<p id="third">La lectura es uno de mis pasatiempos favoritos pues además de que me ayuda a relajarme es un hábito que me ayuda a aprender más palabras y aprender más en general. Es uno de los hábitos que más trabajo me costó adquirir porque no encontraba el tipo de libros que me mantuvieran interesada pero desde que encontré mi género favorito empecé a leer con tanta frecuencia que en un año complete más de 35 libros. Sin embargo, ultimámente ya no he tenido tiempo de leer y es un objetivo de este año retomar ese hábito.</p>
+		<figure>
+		<img src="reading.jpg"/>
+		<figcaption> 3. El pasatiempo que he estado descuidando</figcaption>
+		</figure>
+		<footer>
+		</footer>
+	</article>
+</section>
+<section>
+	<aside>
+		<h4>Información adicional sobre las tecnologías</h4>
+		<ol>
+			El esquema del URL es como el siguiente:<br>
+			//host.dominio:puerto/directorio/nombre_de_archivo<br>
+			<br>
+			MIME usa directivas especiales en los encabezados para describir el formato utilizado en el cuerpo de un mensaje.<br>
+			El esquema está basado en lo siguiente:<br>
+			Tipo de contenido: tipo_mime_principal/subtipo_mime<br>
+			<br>
+			1XX - Indica una respuesta provisional.<br>
+			100 Continue. El servidor ha recibido los headers del request y el cliente debería proceder a enviar el cuerpo de la respuesta.<br>
+			101 Switching Protocols. El requester ha solicitado al servidor conmutar protocolos.<br>
+			102 Processing. Usado en requests para reanudar peticiones PUT o POST abortadas.<br>
+			<br>
+			2XX - Indica que la acción ha sido exitosa.<br>
+			200 OK. El request es correcto.<br>
+			201 Created. Se ha creado un nuevo recurso.<br>
+			202 Aceptada. El proceso del request aún no ha terminado.<br>
+			203 Non-Authoritative Information. El request devuelve información que podría venir de otra fuente.<br>
+			204 No Content. El request no devuelve ningún contenido.<br>
+			205 Reset Content. El request no devuelve ningún contenido y se requiere que el requester recargue el contenido.<br>
+			206 Partial Content. El servidor devuelve sólo parte del recurso debido a una limitación que ha configurado el cliente.<br> 
+			<br>
+			3XX - El cliente ha de tomar una acción adicional para completar el request.<br>
+			300 Multiple Choices. Es una lista de enlaces con máximo de cinco direcciones.<br>
+			301 Moved Permanently. La página solicitada se ha movido permanentemente a una nueva URL.<br>
+			302 Found. La página solicitada se ha movido temporalmente a una nueva URL.<br>
+			303 See Other. La página solicitada se puede encontrar en una URL diferente.<br>
+			<br>
+			<a href="https://diego.com.es/codigos-de-estado-http">Da click aquí para más información :D</a>
+		</ol>
+	</aside>
+	<article>
+		<header>
+		<h3>TECNOLOGÍAS PARA EL DESARROLLO WEB</h3>
+		</header>
+		<p><strong>URL (Uniform Source Locator)</strong></p>
+			<p>Es la dirección única y específica que se asigna a cada uno de los recursos que se encunetran disponibles en WWW para que estos puedan ser localizados por el navegador y desplegados ante el usuario. La dirección provee al navegador de diferentes datos que le indican los pasos a seguir para llegar hasta el recurso solicitado.</p>
+		<p><strong>MIME (Multipurpose Internet Mail Extensions)</strong></p>
+			<p>Estandár propuesto en 1991 por Bell Communications para expandir las diferentes capacidades del mismo, a través de longitud ilimitada de texto, capacidad de adjuntar varios documentos, uso de caracteres no pertenecientes a ASCII, texto enriquecido y capacidad de adjuntar ejecutables, imagenes y/o archivos de audio y video.</p>
+		<p><strong>Métodos y códigos de errores HTTP</strong></p>
+			<p>El uso de métodos es obligatorio para realizar solicitudes al servidor, estos estñan pre definidos y le indican al servidor la acción a realizar.</p>
+			<p>En cuanto a los codigos de errores, estos fueron especificados por el RFC 2616 y cuenta con 5 tipos de respuesta.</p>
+			<ol>
+				1XX - Respuestas informativas<br>
+				2XX - Peticiones correctas<br>
+				3XX - Redirecciones<br>
+				4XX - Errores del cliente<br>
+				5XX - Errores de servidor<br>
+			</ol>
+		<p><strong>HTML5 (Hypertext Markup Language)</strong></p>
+			<p>Quinta versióin del lenguaje markup usado para estructurar y presentar el contenido para la web.</p>
+		<p><strong>JS (JavaScript)</strong></p>
+			<p>Lenguaje de programación sencillo creado por Brendan Eich en 1995 (LiveScript) destinado a utilizarse para el diseño de una página interactiva, convirtiéndose asi en el lenguaje de programación que se utiliza en casi todos los sitios web en el mundo.</p>
+		<p><strong>php (Hypertext Preproccesor)</strong></p>
+			<p>Lenguaje de código abierto creado en 1995 por Rasmus Lerdorf el cual ofrece una salida de texto con codificación UTF-8 compatible con los documentos HTML.  PHP puede ser desplegado en la mayoría de los servidores web y en cualquier sistema operativo sin costo alguno.
+		<p><strong>jsp (Java Server Pages)</strong></p>
+			<p>Lenguaje desarrollado por Sun Microsystems orientado a desarrollar páginas web en Java y creado para ejecutarse del lado del servidor. Esta tecnología permite a los desarrolladores desarrollar rápidamente y mantener de manera sencilla páginas dinámicas, ricas en información como son las que soportan a sistemas de negociación.</p>
+		<p><strong>Ajax (Asynchronous JavaScript And XML)</strong></p>
+			<p>Técnica de desarrollo web para crear aplicaciones interactivas o RIA(Rich Internet Applications). Estas aplicaciones se ejecutan en el cliente, es decir, en el navegador de los usuarios mientras se mantiene la comunicación asíncrona con el servidor en segundo plano. De esta forma es posible realizar cambios sobre las páginas sin necesidad de recargarlas, mejorando la interactividad, velocidad y usabilidad en las aplicaciones.</p>
+		<footer>
+			<details>
+			<summary> Fuentes Bibliográficas </summary>
+			<p>¿Qué es una URL, qué significa y para que sirve? // SoftwareLab. (2019). Retrieved February 11, 2020, from SoftwareLab website: https://softwarelab.org/es/url/</p>
+			<p>‌Castillo, L. HTML5: Iniciación al diseño web. n.d, (2013).</p>
+			<p>‌https://developer.mozilla.org/es/docs/Web/HTTP/Methods</p>
+			<p>‌https://es.ccm.net/contents/118-mime-extensiones-multiproposito-de-correo-de-internet</p>
+			<p>‌shttps://desarrolloweb.com/home/php</p>
+			</details>
+		</footer>
+	</article>
+	<article>
+		<header>
+		<h3>PREGUNTAS Y RESPUESTAS</h3>
+		</header>
+		<p><strong>¿Cuál es la diferencia entre Internet y la World Wide Web?</strong></p>
+			<p>Internet es una red global de redes mientras que la WWW es un recinto de información al cual se accede a través del Internet.</p>
+		<p><strong>¿Cuál es el propósito de los métodos HTTP: GET, HEAD, POST, PUT, PATCH, DELETE?</strong></p>
+			<table>
+				<tr>
+				<th><strong>GET</strong></th>
+				<th>Solicita la representación de un recurso específico(recupera datos)</th>
+				</tr>
+				<tr>
+				<th><strong>HEAD</strong></th>
+				<th>Solicita una respuesta idéntica a la de una petición GET, pero sin el cuerpo de la respuesta.</th>
+				</tr>
+				<tr>
+				<th><strong>POST</strong></th>
+				<th>Envía una entidad a un recurso en específico, causando así cambios en el estado del servidor.</th>
+				</tr>
+				<tr>
+				<th><strong>PUT</strong></th>
+				<th>Reemplaza todas las representaciones actuales del recurso de destino con la carga útil de la petición.</th>
+				</tr>
+				<tr>
+				<th><strong>PATCH</strong></th>
+				<th>Aplica modificaciones parciales a cualquier recurso.</th>
+				</tr>
+				<tr>
+				<th><strong>DELETE</strong></th>
+				<th>Borra un recurso específico</th>
+				</tr>
+			</table>
+		<p><strong>¿Qué método HTTP se debe utilizar al enviar un formulario HTML, por ejemplo cuando ingresas tu usuario y contraseña en algún sitio? ¿Por qué?</strong></p>
+			<p>Se debe utilizar el método POST pues se trata de información sensible.</p>
+		<p><strong>¿Qué método HTTP se utiliza cuando a través de un navegador web se accede a una página a través de un URL?</strong></p>
+			<p>Se debe utilizar el método GET pues es específico para peticiones de información que no es sensible</p>
+		<p><strong>Un servidor web devuelve una respuesta HTTP con código 200. ¿Qué significa esto? ¿Ocurrió algún error?</strong></p>
+			<p>El código 200 indica que el request no ha producido ningún error, es la respuesta estándar para respuestas correctas.</p>
+		<p><strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 404? ¿Por qué?</strong></p>
+			<p>Si el error no fue del cliente a la hora de teclear el url de la página entonces lo más probable es que el link no está activo o actualizado y es responsabilidad del desarrollador resolver dicha problemática. De no ser así, el cliente sería responsable. </p>
+		<p><strong>¿Es responsabilidad del desarrollador corregir un sitio web si un usuario reporta que intentó acceder al sitio y se encontró con un error 500? ¿Por qué?</strong></p>
+			<p>Si, porque el error que arroja hace referencia a un problema interno en el servidor y en este caso el programa que el desarrollador mandó al servidor está mal.</p>
+		<p><strong>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</strong></p>
+			<p>Significa que son atributos que la W3C recomienda dejar de utilizar pues existen alternativas más efectivas, sin embargo manteniendo aún así soporte para sitios que ocupen dichos atributo y así no se pierda compatibilidad con sitios antiguos.</p>
+			<ol>
+				<strong>Etiquetas:</strong> acronym, applet, center, big, fotn, frame, strike, u, tt, s y otros.<br>
+				<strong>Atributos:</strong> shape, target, version, name, scheme, type, align, link, bgcolor, background, cellpadding, cellspacing, width y otros. 
+			</ol>
+		<p><strong>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</strong></p>
+			<p>La principal diferencia en HTML5 es que se separa en la estructura el contenido, la presentación (CSS) y el comportamiento (JS).</p>
+			<p>Además, es m´ss simple, cuenta con un mejor manejo de errores y por lo tanto provee mayor consistencia en documentos de formato incorrecto.</p>
+			<p>Más aún, introduce nuevas etiquetas como: canvas, audio y video soportando de esta manera archivos multimedia por sí solo.</p>
+		<p><strong>¿Qué componentes de estructura y estilo tiene una tabla?</strong></p>
+			<ol>
+				<strong>Estructura: table, tr(row), th(header), td(cell), colgroup, thead, tfoot,tbody, caption and col.</strong> <br>
+				<strong>Estilo: border-collapse, border-spacing, padding, text-align, border, font-weight, background, white-space, border-color and margin.</strong>  
+			</ol>
+		<p><strong>Cuáles son los principales controles de una forma HTML5?</strong></p>
+		<p>Input, form, datalist y output.</p>
+		<p><strong>¿Qué tanto soporte HTML5 tiene el navegador que utilizas?</p>
+			<p>Usando el navegador Google Chrome es posible ver que el soporte HTML5 que tiene es de 481 puntos de un total de 555.</p>
+		<p><strong>Sobre el ciclo de vida y desarrollo de los sistemas de información:</strong></p>
+			<table>
+				<tr>
+				<th><strong>¿Cuál es el ciclo de vida de los sistemas de información?</strong></th>
+				<th><strong>¿Cuál es el ciclo de desarrollo de sistemas de información?</strong></th>
+				</tr>
+				<tr>
+					<th><details><summary>1. Planificación</summary>
+						<p>Definir el problema, identificar áreas de oportunidad/soluciones, generar objetivos del sistema y delimitar el alcance del proyecto. </p></details></th>
+					<th><details><summary>1. Definición de requerimientos</summary>
+						<p>Análisis de las necesidades del cliente, determinar características principales del sistema por medio de la descripción de requisitos que servirá como base para estimar costo, tiempo y alcance. </p></details></th>
+				</tr>
+				<tr>
+					<th><details><summary>2. Análisis</summary>
+						<p>Definir los requisitos funcionales y no funcionales del sistema. Identificar reglas de negocio y definir un plan de trabajo para el desarrollo del sistema tomando en cuenta los riesgos que se puedan presentar, así como la selección de un sistema de versionado.</p></details></th>
+					<th><details><summary>2. Análisis y diseño de software</summary>
+						<p>Se describe la estructura interna del software y las relaciones entre las entidades que lo componen.</p></details></th>
+				</tr>
+								<tr>
+					<th><details><summary>3. Diseño</summary>
+						<p>Descripción detallada de los requisitos del sistema que servirá como base para la siguiente etapa. </p></details></th>
+					<th><details><summary>3. Implementación y prueba de unidades</summary>
+						<p> Basado en la parte de diseño se empieza a programar, por lo que se debe elegir el lenguaje que mas se adecue al problema y dedinir una manera de versionar el código.</p></details></th>
+				</tr>
+				<tr>
+					<th><details><summary>4. Implementación</summary>
+						<p>Codificar lo descrito en los casos de uso, implementando patrones de diseño si es posible y manteniendo un codigo cohesivo y comentado para poder ver los avances que se van logrando. Generar la base de datos. </p></details></th>
+					<th><details><summary>4. Integración y prueba del sistema</summary>
+						<p>Verificar que todos los componentes del sistema funcionen de manera correcta y cumplan con las necesidades planteadas.</p></details></th>
+				</tr>
+				<tr>
+					<th><details><summary>5. Pruebas</summary>
+						<p>Detectar errores o casos de uso no validados dentro del sistema.</p></details></th>
+					<th><details><summary>5. Operación y mantenimiento</summary>
+						<p>Se instala y se verifica el funcionamiento correcto del software en su entorno definitivo. Dar mantenimiento para corregir errores o mejorar el rendimiento. </p></details></th>
+				</tr>
+				<tr>
+					<th><details><summary>6. Instalación/despliegue</summary>
+						<p>Planificar el entorno en el que el sistema puede/debe funcionar tomando en cuenta tanto el hardware como el software.</p></details></th>
+				</tr>
+				<tr>
+					<th><details><summary>7. Uso y mantenimiento</summary>
+						<p>Identificar los defectos detectados durante su vida útil, adaptarlo a nuevas necesidades y añadirle funcionalidades que impliquen una mejora en este.</p></details></th>
+				</tr>
+			</table>
+			<br>
+		<footer>
+			<details>
+			<summary> Fuentes Bibliográficas </summary>
+			<p>‌https://www.gestiopolis.com/ciclo-de-vida-de-un-sistema-de-informacion/</p>
+			<p>‌https://diego.com.es/codigos-de-estado-http</p>
+			<p>https://www.tutorialspoint.com/html5/pdf/html5_deprecated_tags.pdf</p>
+			</details>
+		</footer>
+	</article>
+</section>
+<section>
+	<form action="quiz" method="post">
+  <p>
+    <label>INTRODUCE TUS DATOS</label><br>
+  <p>
+    <label>Nombre</label><br>
+    <input type="text" name="nombre">
+  </p>
+  <p>
+    <label>Apellido</label><br>
+    <input type="text" name="apellido">
+  </p>
+  <p>
+    <label>Correo</label><br>
+    <input type="email" id="email" name="email">
+  </p>
+  <p>
+    <label>Celular</label><br>
+    <input type="tel" name="phone">
+  </p>
+  <p>
+    <label>Semestre</label><br>
+    <select>
+      <option>1º</option>
+      <option>2º</option>
+      <option>3º</option>
+      <option>4º</option>
+      <option>5º</option>
+      <option>6º</option>
+      <option>7º</option>
+      <option>8º</option>
+      <option>9º</option>
+      <option>10º</option>
+      <option>OTRO</option>
+    </select>
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" value="terms">
+      I agree to the <a href="/terms">terms and conditions</a>
+    </label>
+  </p>
+  <p>
+  	<input type="submit" value="Enviar">
+    <button type="reset">Borrar</button>
+  </p>
+</form>
+</section>
+<footer>
+	<p>Creado con la herramienta Sublime Text https://www.sublimetext.com/</p>
+</footer>
+</html>
