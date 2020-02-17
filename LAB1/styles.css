@@ -1,0 +1,114 @@
+html{
+	background-color: #CCD5FF;
+}
+header{
+	font-family:"Lucida Console", Monaco, monospace;
+	color:black;
+	text-align: center;
+}
+h1
+{
+	font-family:Impact, Charcoal, sans-serif;
+	color:#6699ff;
+	text-align:center;
+}
+h3
+{
+	font-family:"Lucida Console", Monaco, monospace;
+	color:#6699ff;
+	text-align:center;
+}
+h4
+{
+	font-family:Impact, Charcoal, sans-serif;
+	text-align:center;
+}
+
+nav{
+	font-family:"Arial Black", Gadget, sans-serif;
+	color: black
+}
+
+a:link
+{
+	font-family:"Arial Black", Gadget, sans-serif;
+	color:black;
+	width:100px;
+}
+a:visited
+{
+	font-family:"Arial Black", Gadget, sans-serif;
+	color:white;
+	width:100px;
+}
+footer{
+	background-color: #7B8CDE;
+	color: white;
+
+}
+article{
+	background-color: #CCD5FF;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+aside{
+	background-color: #E8B4BC;
+}
+th{
+	background-color: #16BAC5;
+	padding-left: 10px;
+	padding-right: 10px;
+	border: 1px solid black;
+}
+table{
+	padding-left: 20px;
+	padding-right: 20px;
+
+}
+summary{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+tr{
+	text-align: left;
+}
+img{
+	width: 350px;
+}
+
+#first
+{
+	background-color:#B2D6FF;
+	padding: 20px;
+	float:right;
+	max-width: 900px;
+}
+#second
+{
+	background-color:#ccccff;
+	padding: 20px;
+	float:right;
+	max-width: 900px;
+}
+#third
+{
+	background-color:#F09A9D;
+	padding: 20px;
+	float:right;
+	max-width: 900px;
+}
+aside{
+	background-color:#F09A9D;
+	float:right;
+	width: 400px;
+	margin: 5px;
+    height: 1050px;
+}
+article{
+	padding: 20px;
+	border: solid 1px;
+	margin-top:5px;
+}
+ol{
+	padding-left: 10px;
+}
