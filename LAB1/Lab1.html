@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<link rel="icon" href="laptop.png">
 <link rel="stylesheet" type="text/css" href="styles.css">
 <header>
 	<h1>Lab 1. Introducción a las aplicaciones web, HTML5 y ciclo de vida de los sistemas de información</h1>
@@ -8,11 +9,11 @@
 	<p>A01700284@itesm.mx</p>
 </header>
 <nav>
-	<ol>
-		<li> <p>MIS HOBBIES </p>
-		<li> <p>TECNOLOGÍAS PARA DESARROLLO WEB</p>
-		<li> <p>PREGUNTAS Y RESPUESTAS </p>
-	</ol>
+	<ul>
+		<li>MIS HOBBIES</li>
+		<li>TECNOLOGÍAS PARA DESARROLLO WEB</li>
+		<li>PREGUNTAS Y RESPUESTAS</li>
+	</ul>
 </nav>
 <section>
 	<article>
@@ -41,36 +42,33 @@
 <section>
 	<aside>
 		<h4>Información adicional sobre las tecnologías</h4>
-		<ol>
-			El esquema del URL es como el siguiente:<br>
-			//host.dominio:puerto/directorio/nombre_de_archivo<br>
+		<ul>
+			<li>El esquema del URL es como el siguiente:<br>//host.dominio:puerto/directorio/nombre_de_archivo</li>
 			<br>
-			MIME usa directivas especiales en los encabezados para describir el formato utilizado en el cuerpo de un mensaje.<br>
-			El esquema está basado en lo siguiente:<br>
-			Tipo de contenido: tipo_mime_principal/subtipo_mime<br>
+			<li>MIME usa directivas especiales en los encabezados para describir el formato utilizado en el cuerpo de un mensaje.<br>
+			El esquema está basado en lo siguiente: tipo_mime_principal/subtipo_mime</li>
 			<br>
-			1XX - Indica una respuesta provisional.<br>
+			<li>1XX - Indica una respuesta provisional.<br>
 			100 Continue. El servidor ha recibido los headers del request y el cliente debería proceder a enviar el cuerpo de la respuesta.<br>
 			101 Switching Protocols. El requester ha solicitado al servidor conmutar protocolos.<br>
-			102 Processing. Usado en requests para reanudar peticiones PUT o POST abortadas.<br>
+			102 Processing. Usado en requests para reanudar peticiones PUT o POST abortadas.</li>
 			<br>
-			2XX - Indica que la acción ha sido exitosa.<br>
+			<li>2XX - Indica que la acción ha sido exitosa.<br>
 			200 OK. El request es correcto.<br>
 			201 Created. Se ha creado un nuevo recurso.<br>
 			202 Aceptada. El proceso del request aún no ha terminado.<br>
 			203 Non-Authoritative Information. El request devuelve información que podría venir de otra fuente.<br>
 			204 No Content. El request no devuelve ningún contenido.<br>
 			205 Reset Content. El request no devuelve ningún contenido y se requiere que el requester recargue el contenido.<br>
-			206 Partial Content. El servidor devuelve sólo parte del recurso debido a una limitación que ha configurado el cliente.<br> 
+			206 Partial Content. El servidor devuelve sólo parte del recurso debido a una limitación que ha configurado el cliente.</li> 
 			<br>
-			3XX - El cliente ha de tomar una acción adicional para completar el request.<br>
+			<li>3XX - El cliente ha de tomar una acción adicional para completar el request.<br>
 			300 Multiple Choices. Es una lista de enlaces con máximo de cinco direcciones.<br>
 			301 Moved Permanently. La página solicitada se ha movido permanentemente a una nueva URL.<br>
 			302 Found. La página solicitada se ha movido temporalmente a una nueva URL.<br>
-			303 See Other. La página solicitada se puede encontrar en una URL diferente.<br>
-			<br>
+			303 See Other. La página solicitada se puede encontrar en una URL diferente.</li>
 			<a href="https://diego.com.es/codigos-de-estado-http">Da click aquí para más información :D</a>
-		</ol>
+		</ul>
 	</aside>
 	<article>
 		<header>
@@ -83,13 +81,13 @@
 		<p><strong>Métodos y códigos de errores HTTP</strong></p>
 			<p>El uso de métodos es obligatorio para realizar solicitudes al servidor, estos estñan pre definidos y le indican al servidor la acción a realizar.</p>
 			<p>En cuanto a los codigos de errores, estos fueron especificados por el RFC 2616 y cuenta con 5 tipos de respuesta.</p>
-			<ol>
-				1XX - Respuestas informativas<br>
-				2XX - Peticiones correctas<br>
-				3XX - Redirecciones<br>
-				4XX - Errores del cliente<br>
-				5XX - Errores de servidor<br>
-			</ol>
+			<ul>
+				<li>1XX - Respuestas informativas</li>
+				<li>2XX - Peticiones correctas</li>
+				<li>3XX - Redirecciones</li>
+				<li>4XX - Errores del cliente</li>
+				<li>5XX - Errores de servidor</li>
+			</ul>
 		<p><strong>HTML5 (Hypertext Markup Language)</strong></p>
 			<p>Quinta versióin del lenguaje markup usado para estructurar y presentar el contenido para la web.</p>
 		<p><strong>JS (JavaScript)</strong></p>
@@ -156,19 +154,19 @@
 			<p>Si, porque el error que arroja hace referencia a un problema interno en el servidor y en este caso el programa que el desarrollador mandó al servidor está mal.</p>
 		<p><strong>¿Qué significa que un atributo HTML5 esté depreciado o desaprobado (deprecated)? Menciona algunos elementos de HTML 4 que en HTML5 estén desaprobados.</strong></p>
 			<p>Significa que son atributos que la W3C recomienda dejar de utilizar pues existen alternativas más efectivas, sin embargo manteniendo aún así soporte para sitios que ocupen dichos atributo y así no se pierda compatibilidad con sitios antiguos.</p>
-			<ol>
-				<strong>Etiquetas:</strong> acronym, applet, center, big, fotn, frame, strike, u, tt, s y otros.<br>
-				<strong>Atributos:</strong> shape, target, version, name, scheme, type, align, link, bgcolor, background, cellpadding, cellspacing, width y otros. 
-			</ol>
+			<ul>
+				<li><strong>Etiquetas:</strong> acronym, applet, center, big, fotn, frame, strike, u, tt, s y otros.</li>
+				<li><strong>Atributos:</strong> shape, target, version, name, scheme, type, align, link, bgcolor, background, cellpadding, cellspacing, width y otros.</li>
+			</ul>
 		<p><strong>¿Cuáles son las diferencias principales entre HTML 4 y HTML5?</strong></p>
 			<p>La principal diferencia en HTML5 es que se separa en la estructura el contenido, la presentación (CSS) y el comportamiento (JS).</p>
-			<p>Además, es m´ss simple, cuenta con un mejor manejo de errores y por lo tanto provee mayor consistencia en documentos de formato incorrecto.</p>
+			<p>Además, es más simple, cuenta con un mejor manejo de errores y por lo tanto provee mayor consistencia en documentos de formato incorrecto.</p>
 			<p>Más aún, introduce nuevas etiquetas como: canvas, audio y video soportando de esta manera archivos multimedia por sí solo.</p>
 		<p><strong>¿Qué componentes de estructura y estilo tiene una tabla?</strong></p>
-			<ol>
-				<strong>Estructura: table, tr(row), th(header), td(cell), colgroup, thead, tfoot,tbody, caption and col.</strong> <br>
-				<strong>Estilo: border-collapse, border-spacing, padding, text-align, border, font-weight, background, white-space, border-color and margin.</strong>  
-			</ol>
+			<ul>
+				<li><strong>Estructura:</strong> table, tr(row), th(header), td(cell), colgroup, thead, tfoot,tbody, caption and col.</li>
+				<li><strong>Estilo:</strong> border-collapse, border-spacing, padding, text-align, border, font-weight, background, white-space, border-color and margin.</li>
+			</ul>
 		<p><strong>Cuáles son los principales controles de una forma HTML5?</strong></p>
 		<p>Input, form, datalist y output.</p>
 		<p><strong>¿Qué tanto soporte HTML5 tiene el navegador que utilizas?</p>
