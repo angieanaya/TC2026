@@ -2,61 +2,70 @@
 <html>
 <head>
 	<title>Lab 4: Fundamentos de JavaScript</title>
+	<link rel="icon" href="laptop.png">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Da|Comfortaa|Montserrat|Questrial|Syncopate:700|Titan+One" rel="stylesheet">
 	<script type = "text/javascript" src = "Ejercicio1.js"></script>
-	<script type = "text/javascript" src = "ejercicio2.js"></script>
-	<script type = "text/javascript" src = "ejercicio3.js"></script>
-	<script type = "text/javascript" src = "ejercicio4.js"></script>
-	<script type = "text/javascript" src = "ejercicio5.js"></script>
-	<script type = "text/javascript" src = "ejercicio6.js"></script>
+	<script type = "text/javascript" src = "Ejercicio2.js"></script>
+	<script type = "text/javascript" src = "Ejercicio3.js"></script>
+	<script type = "text/javascript" src = "Ejercicio4.js"></script>
+	<script type = "text/javascript" src = "Ejercicio5.js"></script>
+	<script type = "text/javascript" src = "Ejercicio6.js"></script>
 </head>
 <body>
-	<head>
+	<header>
 		<h1>Lab 4: Fundamentos de JavaScript</h1>
 		<p>María de los Ángeles Contreras Anaya</p>
 		<p>A01700284</p>
-	</head>
+	</header>
 	<nav>
 		
 	</nav>
 	<section>
-		<h1>Ejercicios JavaScript</h1>
-		<article>
-			<h1>1.</h1>	
+		<h2>Ejercicios JavaScript</h1>
+		<article id="e1">
+			<h3>1.</h3>	
 			<p>Descripción</p>
 			<p><em>Entrada: un número pedido con un prompt. Salida: Una tabla con los números del 1 al número dado con sus cuadrados y cubos. Utiliza document.write para producir la salida.</em></p>
+			<button onclick="crearTabla()">GENERAR TABLA</button>
 		</article>
 		<article>
-			<h1>2.</h1>
+			<h3>2.</h3>
 			<p>Descripción</p>
 			<p><em>Entrada: Usando un prompt se pide el resultado de la suma de 2 números generados de manera aleatoria. Salida: La página debe indicar si el resultado fue correcto o incorrecto, y el tiempo que tardó el usuario en escribir la respuesta.</em></p>
+			<button onclick="sumatoria()">SUMAR</button>
 		</article>
 		<article>
-			<h1>3.</h1>
+			<h3>3.</h3>
 			<p>Descripción</p>
 			<p><em>Función: contador. Parámetros: Un arreglo de números. Regresa: La cantidad de números negativos en el arreglo, la cantidad de 0's, y la cantidad de valores mayores a 0 en el arreglo.</em></p>
+			<button onclick="contador()">CONTAR</button>
 		</article>
 		<article>
-			<h1>4.</h1>
+			<h3>4.</h3>
 			<p>Descripción</p>
 			<p><em>Función: promedios. Parámetros: Un arreglo de arreglos de números. Regresa: Un arreglo con los promedios de cada uno de los renglones de la matriz.</em></p>
+			<button onclick="promedios()">PROMEDIAR</button>
 		</article>
 		<article>
-			<h1>5.</h1>
+			<h3>5.</h3>
 			<p>Descripción</p>
 			<p><em>Función: inverso. Parámetros: Un número. Regresa: El número con sus dígitos en orden inverso.</em></p>
+			<button onclick="inverso()">INVERTIR</button>
 		</article>
 		<article>
-			<h1>6.</h1>
+			<h3>6.</h3>
 			<p>Descripción</p>
 			<p><em>Crea una solución para un problema de tu elección, utilizando al menos un objeto con constructor y mínimo 2 métodos.</em></p>
 		</article>
 	</section>
 	<section>
 		<article>
-			<h1>Q & A</h1>
+			<h2>Q & A</h2>
 			<ol>
 				<li>
-					¿Qué diferencias y semejanzas hay entre Java y JavaScript?
+					<strong>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</strong>
 					<table>
 						<tr>
 							<th>JavaScript</th>
@@ -83,8 +92,9 @@
 						</tr>
 					</table>
 				</li>
+				<br>
 				<li>
-					¿Qué métodos tiene el objeto Date? 
+					<strong>¿Qué métodos tiene el objeto Date?</strong>
 					<ul>
 						<li>getFullYear()</li>
 						<li>getDay()</li>
@@ -93,8 +103,9 @@
 						<li>toString()</li>
 					</ul>
 				</li>
+				<br>
 				<li>
-					¿Qué métodos tienen los arreglos? 
+					<strong>¿Qué métodos tienen los arreglos?</strong>
 					<ul>
 						<li>
 							.forEach: Se ejecuta una vez por cada elemento en el arreglo
@@ -115,24 +126,30 @@
 						</li>
 					</ul>
 				</li>
+				<br>
 				<li>
-					¿Cómo se declara una variable con alcance local dentro de una función?<br>
+					<strong>¿Cómo se declara una variable con alcance local dentro de una función?</strong><br>
 					function creaMensaje() {<br>
   						var mensaje = “Mensaje de prueba”;<br>
 					}			<br>		
 					creaMensaje();<br>
 					alert(mensaje);<br>
 				</li>
+				<br>
 				<li>
-					¿Qué implicaciones tiene utilizar variables globales dentro de funciones?<br>
+					<strong>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</strong><br>
 					Si una variable se declara de manera implícita dentro de una función su alcance es global. Es mejor declarar variables como locales para evitar contaminar el objeto global.
 				</li>
+				<br>
 				<li>
-					¿Qué método de String se puede utilizar para buscar patrones con expresiones regulares?¿Para qué podrías utilizar esto en una aplicación web?<br>
+					<strong>¿Qué método de String se puede utilizar para buscar patrones con expresiones regulares?¿Para qué podrías utilizar esto en una aplicación web?</strong><br>
 					El método regex, se podría utilizar para la verificación del ingreso de datos por parte del usuario en formas presentes en la página web.
 				</li>
 			</ol>
 		</article>
 	</section>
+	<footer>
+		<p>Angie Anaya</p>
+	</footer>
 </body>
 </html>

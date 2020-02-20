@@ -1,0 +1,45 @@
+header{
+	background-color: #4C8AFF;
+	text-align: center;
+	color: white;
+}
+h1{
+	font-family: 'Baloo Da', cursive;
+	font-size: 45px;
+}
+h2{
+	font-family: 'Baloo Da', cursive;
+	font-size: 35px;
+	text-align: center;
+}
+h3{
+	font-family: 'Baloo Da', cursive;
+	font-size: 30px;
+}
+table{
+
+}
+th{
+	background-color: #4C3AFA;
+}
+tr{
+	background-color: #4C8AFF;
+}
+p{
+	font-family: 'Montserrat', cursive;
+}
+ol{
+	font-family: 'Montserrat', cursive;
+}
+strong{
+	font-family: 'Montserrat', sans-serif;
+}
+footer{
+	background-color: #4C8AFF;
+	text-align: center;
+	color: white;
+}
+button{
+	font-family: 'Comfortaa', cursive;
+	font-size: 12px;
+}
