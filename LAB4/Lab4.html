@@ -16,13 +16,11 @@
 <body>
 	<header>
 		<h1>Lab 4: Fundamentos de JavaScript</h1>
-		<p>María de los Ángeles Contreras Anaya</p>
-		<p>A01700284</p>
 	</header>
 	<nav>
 		
 	</nav>
-	<section>
+	<section id="ejercicios">
 		<h2>Ejercicios JavaScript</h1>
 		<article id="e1">
 			<h3>1.</h3>	
@@ -58,6 +56,7 @@
 			<h3>6.</h3>
 			<p>Descripción</p>
 			<p><em>Crea una solución para un problema de tu elección, utilizando al menos un objeto con constructor y mínimo 2 métodos.</em></p>
+			<button onclick="probelma()">SOLUCIÓN</button>
 		</article>
 	</section>
 	<section>
@@ -66,7 +65,7 @@
 			<ol>
 				<li>
 					<strong>¿Qué diferencias y semejanzas hay entre Java y JavaScript?</strong>
-					<table>
+					<table id="tableQ">
 						<tr>
 							<th>JavaScript</th>
 							<th>Java</th>
@@ -108,29 +107,29 @@
 					<strong>¿Qué métodos tienen los arreglos?</strong>
 					<ul>
 						<li>
-							.forEach: Se ejecuta una vez por cada elemento en el arreglo
+							<strong>.forEach</strong>: Se ejecuta una vez por cada elemento en el arreglo
 						</li>
-						<li>.map: Se ejecuta una vez por cada elemento del arreglo que crea uno nuevo.<br>Si no se usará el nuevo arreglo se depe optar por el método anterior. 
-						</li>
-						<li>
-							.find: Retorna el valor del primer elemento del arreglo que cumpla la condición.
+						<li><strong>.map</strong>: Se ejecuta una vez por cada elemento del arreglo que crea uno nuevo.<br>Si no se usará el nuevo arreglo se depe optar por el método anterior. 
 						</li>
 						<li>
-							.filter: Crea un nuevo arreglo con los elementos que pasan una condición.
+							<strong>.find</strong>: Retorna el valor del primer elemento del arreglo que cumpla la condición.
 						</li>
 						<li>
-							.reduce: Ejecuta una función que retorna un acumulado como valor único.
+							<strong>.filter</strong>: Crea un nuevo arreglo con los elementos que pasan una condición.
 						</li>
 						<li>
-							.some: Verifica si un elemento que cumpla la condición existe o no en el arreglo 
+							<strong>.reduce</strong>: Ejecuta una función que retorna un acumulado como valor único.
+						</li>
+						<li>
+							<strong>.some</strong>: Verifica si un elemento que cumpla la condición existe o no en el arreglo 
 						</li>
 					</ul>
 				</li>
 				<br>
 				<li>
-					<strong>¿Cómo se declara una variable con alcance local dentro de una función?</strong><br>
-					function creaMensaje() {<br>
-  						var mensaje = “Mensaje de prueba”;<br>
+					<strong>¿Cómo se declara una variable con alcance local dentro de una función?</strong><br><br>
+					<strong>function creaMensaje()</strong> {<br>
+  						&nbsp; <u>var mensaje = “Esta es una variable local”;</u><br>
 					}			<br>		
 					creaMensaje();<br>
 					alert(mensaje);<br>
@@ -149,7 +148,7 @@
 		</article>
 	</section>
 	<footer>
-		<p>Angie Anaya</p>
+		<p>María de los Ángeles Contreras Anaya &nbsp;&nbsp;&nbsp; A01700284 &nbsp;&nbsp;&nbsp;  ®</p>
 	</footer>
 </body>
 </html>

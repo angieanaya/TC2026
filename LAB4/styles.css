@@ -1,5 +1,5 @@
 header{
-	background-color: #4C8AFF;
+	background-color: #CD9391;
 	text-align: center;
 	color: white;
 }
@@ -11,19 +11,38 @@ h2{
 	font-family: 'Baloo Da', cursive;
 	font-size: 35px;
 	text-align: center;
+	background-color: #F0DEDE;
 }
 h3{
 	font-family: 'Baloo Da', cursive;
 	font-size: 30px;
+	text-align: left;
+	float: left;
+	padding: 10px;
+	padding-right: 15px;
 }
-table{
 
+#tableQ{
+	border-radius: 2px;
+}
+body{
+	background-color: #FEFAF9;
+}
+#ejercicios{
+	background-color: #FEFAF9;
+	padding: 1px;
+}
+section{
+	background-color: #FEFAF9;
 }
 th{
-	background-color: #4C3AFA;
+	background-color: #FEBAB5;
 }
 tr{
-	background-color: #4C8AFF;
+	background-color: #FEE1DF;
+}
+td{
+	border: 1px solid black;
 }
 p{
 	font-family: 'Montserrat', cursive;
@@ -31,15 +50,29 @@ p{
 ol{
 	font-family: 'Montserrat', cursive;
 }
+li{
+	font-family: 'Montserrat', cursive;
+	padding: 5px;
+}
 strong{
 	font-family: 'Montserrat', sans-serif;
 }
 footer{
 	background-color: #4C8AFF;
-	text-align: center;
 	color: white;
+	background-color: #CD9391;
+	padding:10px;
+	text-align: center;
 }
 button{
 	font-family: 'Comfortaa', cursive;
 	font-size: 12px;
+	transition-duration: 0.4s;
+	border: 2px solid #73A2C9;
+	border-radius: 2px;
+	padding: 5px;
+}
+button:hover{
+	background-color: #73A2C9;
+  	color: white;
 }
