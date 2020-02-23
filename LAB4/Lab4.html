@@ -56,7 +56,18 @@
 			<h3>6.</h3>
 			<p>Descripción</p>
 			<p><em>Crea una solución para un problema de tu elección, utilizando al menos un objeto con constructor y mínimo 2 métodos.</em></p>
-			<button onclick="probelma()">SOLUCIÓN</button>
+			<p>Decidí hacer una lista de tareas donde cada task nuevo es un objecto donde el constructor tiene de atributos: id, texto y completado. El objeto puede ser marcado como completado o eliminado.</p>
+
+			<section>
+				<div id="myDIV" class="header">
+  				<h1>MY TO-DO LIST</h1>
+  				<input type="text" id="taskInput" placeholder="ENTER A TASK HERE">
+  				<button onclick="addTask()" class="addBtn">ADD TASK</button>
+				</div>
+				<ul id="myTasks">
+				</ul>
+			</section>
+
 		</article>
 	</section>
 	<section>
