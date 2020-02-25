@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 5: Programación orientada a eventos</title>
+	<link rel="icon" href="laptop.png">
+	<link rel="stylesheet" type="text/css" href="styles1.css">
+	<script type = "text/javascript" src = "pwdValidator.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Da|Comfortaa|Montserrat|Questrial|Syncopate:700|Titan+One" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h3>Lab 5: Programación orientada a eventos</h1>
+		<h1>C A S O &nbsp;&nbsp;&nbsp;  1</h1>
+	</header>
+	<section>
+		<h2>PASSWORD VALIDATOR</h2>
+		<div>
+			<form>
+				<label>Password</label><br>
+				<input type="password" name="passwd" id="password"  onkeyup="validatePswd();" onfocus="showRestrictions();" onblur="hideRestrcitions();" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"><br>
+				<label>Confirm password</label><br>
+				<input type="password" name="passwd2" id="confirmation" onkeyup="validatePswd();"><br><br>
+				<span id="confirmationMsg" class="confirm-message"></span>
+			</form>
+		</div>
+		<div id="restrictions">
+			<h4>Make sure your password has: </h4>
+			<ul>
+				<li id = "letter" class="invalid">At least one lowercase letter.</li>
+				<li id = "capital" class="invalid">At least one capital letter.</li>
+				<li id = "number" class="invalid">At least one number.</li>
+				<li id = "length" class="invalid">At least 8 characters.</li>
+			</ul>
+		</div>
+	</section>
+	<section>
+		<h2>Q & A</h2>
+		<ul>
+			<li>
+				<strong>¿Por qué es una buena práctica usar JavaScript para checar que sean válidos los inputs de las formas antes de enviar los datos al servidor?</strong><br>
+				Las validaciones en JavaScript se consideran una buena práctica pues ayudan a brindar al usuario una mejor experiencia y proteger sus datos. 
+				<br>
+				Si existe un error en el formulario gracias a las validaciones JS se le notifica de manera inmediata al usuario la correción que debe implementar en lugar de tener que esperar una respuesta por parte del servidor. Esto también ayuda a reducir la carga de peticiones del servidor y por lo tanto mejorar el tiempo de respuesta del mismo en otros casos. 
+			</li>
+			<li>
+				<strong>¿Cómo puedes saltarte la seguridad de validaciones hechas con JavaScript?</strong><br>
+				Existen dos formas, la primera es deshabilitar el javascript dentro del navegador y la segunda es accediendo al código y al buscar el "action" del formulario puedes ubicar a donde se dirige y de esta manera buscar el url de manera directa. 
+			</li>
+			<li>
+				<strong>Si te puedes saltar la seguridad de las validaciones de JavaScript, entonces ¿por qué la primera pregunta dice que es una buena práctica?</strong><br>
+				Es una buena práctica porque se validan que los datos sen correctos antes de llegar al servidor y así se evitan hacer demasiadas peticiones erróneas que sólo vuelven mas lento el proceso. Con estas validaciones también se busca proteger los datos de los usuarios al incitar a estos a crear mejores contraseñas y así facilitar el trabajo de proteger sus cuentas, además se busca proteger el sitio como tal ante usuarios maliciosos. El que sea una buena práctica no significa realemente que sea infalible pero su uso provee de mayor seguridad tanto al sitio como al usuario.
+			</li>
+		</ul>
+	</section>
+	<section>
+		<h2>Referencias</h2>
+		<ul>
+			<li>https://uniwebsidad.com/libros/javascript/capitulo-7/validacion</li>
+			<li>https://www.the-art-of-web.com/javascript/validate/</li>
+			<li>https://developer.mozilla.org/es/docs/Learn/HTML/Forms/Validacion_formulario_datos</li>
+		</ul>
+	</section>
+	<footer>
+		<p>María de los Ángeles Contreras Anaya &nbsp;&nbsp;&nbsp; A01700284 &nbsp;&nbsp;&nbsp;  ®</p>
+	</footer>
+</body>
+</html>
