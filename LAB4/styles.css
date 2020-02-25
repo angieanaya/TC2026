@@ -168,3 +168,95 @@ input {
 .addBtn:hover {
   background-color: #73A2C9;
 }
+/* TO DO LIST STYLE*/
+
+#myTasks {
+  margin: 0;
+  padding: 0;
+}
+
+#myTasks li {
+  cursor: pointer;
+  position: relative;
+  padding-left: 40px;
+  background: #eee;
+  font-size: 18px;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#myTasks li:hover {
+  background: #B4D2E7;
+}
+
+#myTasks li.checked {
+  background: #B4D2E7;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+#myTasks li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 4.5px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 4.5px 10px 4.5px 10px;
+}
+
+.close:hover {
+  background-color: #94ACBE;
+  color: white;
+}
+
+.header {
+  background-color: #D6E6F1;
+  padding: 30px 40px;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input {
+  margin-left: 11%;
+  margin-bottom: 3%;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 5px;
+    float: center;
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.addBtn {
+  font-family: 'Comfortaa', cursive;
+  padding: 5px;
+  border: 2px solid #73A2C9;
+  font-size: 20px;
+  border-radius: 2px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.addBtn:hover {
+  background-color: #73A2C9;
+}

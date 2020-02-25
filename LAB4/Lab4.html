@@ -56,9 +56,17 @@
 			<h3>6.</h3>
 			<p>Descripción</p>
 			<p><em>Crea una solución para un problema de tu elección, utilizando al menos un objeto con constructor y mínimo 2 métodos.</em></p>
-			<p>Al principio intenté hacer un to do list, sin embargo no pude resolver un problema con el completar tareas es por eso que decidi hacer un script que calcula el IMC y te indica el rango de bienestar en el que te encuentras.</p>
-			<button onclick="IMC()">CALCULAR IMC</button>	
-			</div>
+			<p>Decidí hacer una lista de tareas donde cada task nuevo es un objeto que tiene de atributos el texto y un boolean completado. El objeto puede ser marcado como completado o eliminado.</p>
+
+			<section>
+				<div id="myDIV" class="header">
+  				<h1>MY TO-DO LIST</h1>
+  				<input type="text" id="taskInput" placeholder="ENTER A TASK HERE">
+  				<button onclick="addTask()" class="addBtn">ADD TASK</button>
+				</div>
+				<ul id="myTasks">
+				</ul>
+			</section>
 		</article>
 	</section>
 	<section>
