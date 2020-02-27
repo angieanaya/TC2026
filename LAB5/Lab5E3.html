@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lab 5: Programación orientada a eventos</title>
+	<link rel="icon" href="laptop.png">
+	<link rel="stylesheet" type="text/css" href="styles3.css">
+	<script type = "text/javascript" src = "cinema.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Da|Comfortaa|Montserrat|Questrial|Syncopate:700|Titan+One" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<h3>Lab 5: Programación orientada a eventos</h1>
+		<h1>C A S O &nbsp;&nbsp;&nbsp;  3</h1>
+	</header>
+	<section>
+		<h2>C I N E M A T O O</h2>
+		<form name="form1">
+			<div> 
+				<p>VIEW THIS WEEKS MOVIE CATALOG</p>
+				<select name="movie" id="movie">
+ 					<option value="">SELECT MOVIE</option>
+ 					<option value="Freedom Writers">Freedom Writers</option>
+ 					<option value="Hacksaw Ridge">Hacksaw Ridge</option>
+ 					<option value="August Rush">August Rush</option>
+				</select>
+			</div>
+			<div>
+ 				<p>ENTER YOUR NAME: </p>
+ 				<input type="text" name="textbox" id="name" value=""/>
+			</div>
+			<div>
+ 				<p><input type="checkbox" id="childTickets" value="3" checked />CHILDREN TICKET COUNTS:&nbsp; &nbsp; <input type="text" id="childCount" value="1" size="3" /></p>
+ 				<br>
+ 				<p><input type="checkbox" id="adultTickets" value="8" checked />ADULT TICKET COUNT: &nbsp;
+ 				<input type="text" id="adultCount" value="1" size="3" /></p>
+
+ 				<p><input type="button" value="PURCHASE" id="btn" onclick="printInfo()" />
+			</div>
+
+		</form>
+	<div id="receipt"> </div>
+	</section>
+	<footer>
+		<p>María de los Ángeles Contreras Anaya &nbsp;&nbsp;&nbsp; A01700284 &nbsp;&nbsp;&nbsp;  ®</p>
+	</footer>
+</body>
+</html>

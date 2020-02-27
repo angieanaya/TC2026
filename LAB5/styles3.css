@@ -1,0 +1,56 @@
+header{
+	background-color: #CD9391;
+	text-align: center;
+	color: white;
+}
+h1{
+	font-family: 'Baloo Da', cursive;
+	font-size: 25px;
+}
+
+h2{
+	font-family: 'Baloo Da', cursive;
+	font-size: 50px;
+	text-align: center;
+	background-color: #F0DEDE;
+}
+h3{
+	font-family: 'Baloo Da', cursive;
+	font-size: 35px;
+	text-align: center;
+	margin: 0;
+}
+body{
+	background-color: #FEFAF9;
+	font-family: 'Montserrat', cursive;
+}
+section{
+	background-color: #FEFAF9;
+}
+strong{
+	font-family: 'Montserrat', sans-serif;
+}
+form{
+	text-align: center;
+}
+footer{
+	background-color: #4C8AFF;
+	color: white;
+	background-color: #CD9391;
+	padding:10px;
+	text-align: center;
+}
+#btn{
+	font-family: 'Montserrat', cursive;
+	border-radius: 2px;
+	font-size: 18px;
+}
+
+select{
+	font-family: 'Montserrat', cursive;
+	font-size: 15px;
+}
+input{
+		font-family: 'Montserrat', cursive;
+	font-size: 15px;
+}
