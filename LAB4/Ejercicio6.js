@@ -33,6 +33,7 @@ function addTask() {
     }
   }
 
+<<<<<<< HEAD
     //crosses out the tasks when clicked on them
     let list = document.querySelector('ul');
     list.addEventListener('click', function(ev) {
@@ -41,3 +42,13 @@ function addTask() {
         }
     });
 }
+=======
+ 	//crosses out the tasks when clicked on them
+	let list = document.querySelector('ul');
+	list.addEventListener('click', function(ev) {
+  		if (ev.target.tagName === 'LI') {
+    	ev.target.classList.toggle('checked');
+  		}
+	});
+}
+>>>>>>> parent of 1cf5d5b... Lab 4 finalizado

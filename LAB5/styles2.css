@@ -1,0 +1,81 @@
+/*TITLE*/
+h1{
+	font-family: 'Pacifico', cursive;
+	font-size: 100px;
+	background-color: #C4E8DC;
+	text-align: center;
+}
+/*SUBTITLE*/
+h2{
+	font-family: 'Montserrat', cursive;
+	color: black;
+	background-color: #E9F6F2;
+	text-align: center;
+}
+/*PRODUCTS NAME*/
+h3{
+	font-family: 'Pacifico', cursive;
+	font-size: 25px;
+	text-align: center;
+	margin: 2%;
+	background-color: #C4E8DC;
+}
+/*PRODUCT ATTRIBUTES*/
+p{
+	font-size: 15px;
+	font-family: 'Montserrat', cursive;
+}
+
+footer{
+	font-family: 'Montserrat', cursive;
+	color: black;
+	background-color: #E9F6F2;
+	text-align: center;
+}
+
+#pic{
+	width: 50%;
+	height: auto;
+}
+
+#card{
+	width: 40%;
+	height: auto;
+	margin: 2%;
+	text-align: center;
+	border-style: ridge;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	padding: 3%;
+}
+
+#checkout{
+	border-radius: 2%;
+	background-color: white;
+ 	color: black;
+    border: 2px solid #C4E8DC;
+   	font-size: 15px;
+	font-family: 'Montserrat', cursive;
+	text-align: center;
+	transition-duration: 0.5s;
+	cursor: pointer;
+	border-radius: 4px;
+
+}
+
+#checkout:hover{
+	border-radius: 2%;
+	background-color: #C4E8DC;
+ 	color: black;
+    border: 2px solid black;
+   	font-size: 15px;
+	font-family: 'Montserrat', cursive;
+
+}
+
+#products{
+	padding-left: 33%
+}
+
+.page{
+	text-align: center;
+}

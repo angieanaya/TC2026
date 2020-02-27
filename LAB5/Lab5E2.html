@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Lab 5: Programación orientada a eventos
+    </title>
+    <link rel="stylesheet" href="styles2.css">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Da|Montserrat:400,500|Pacifico&display=swap" rel="stylesheet">
+  </head>
+  <body>
+        <div class='page'>
+            <header>
+            	<h2>Lab 5: Programación orientada a eventos :: CASO 2</h2>
+                <h1>Cupcakeria</h1>
+            </header>
+        <section id="products">
+            <section id=card>
+                <h3>Red Velvet Cupcakes</h3>
+                <img src="redvelvet.jpg" id="pic"/>
+                <p> Precio: $48.00<br/>Precio por docena: $40<br/>Cantidad: </p>
+                <input type="number" id="redVelvet" min="0" max="50">
+            </section>
+            
+            <section id="card">
+                <h3>Salted Caramel Cupcakes</h3>
+                <img src="salted.jpg" id="pic"/>
+                <p> Precio: $53.00<br/>Precio por docena: $45<br/>Cantidad: </p>
+                <input type="number" id="salted" min="0" max="50"> 
+            </section>
+            
+            <section id="card">
+                <h3>S'mores Cupcakes</h3>
+                <img src="smores.jpg" id="pic"/>
+                <p> Precio: $50.00<br/>Precio por docena: $42.00<br/>Cantidad: </p>
+                <input type="number" id="smores" min="0" max="50"> 
+            </section>
+           </section>
+            <div>
+            <input type="button" id ="checkout" value="ORDER NOW">
+        	</div>
+            <article id="article">
+                <p id="subtotal"></p>
+                <p id="taxes"></p>
+                <p id="total"></p>
+            </article>
+	<footer>
+		<p>María de los Ángeles Contreras Anaya &nbsp;&nbsp;&nbsp; A01700284 &nbsp;&nbsp;&nbsp;  ®</p>
+	</footer>
+  </body>
+      <script src="onlineStore.js"></script>
+</html>
