@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" href="laptop.png">
+	<title>Lab 7: Front-end Frameworks</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+	<!-- Framework imports -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    
+    <!-- Typography imports -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Da|Comfortaa|Montserrat|Questrial|Syncopate:700|Titan+One" rel="stylesheet">
+</head>
+<body>
+<header>
+	<nav class="nav-extended pink accent-3">
+	    <div class="nav-wrapper">
+	      <a href="#" class="brand-logo">Lab 7: Front-end Frameworks</a>
+	    </div>
+	    <div class="nav-content">
+	      <ul class="tabs tabs-transparent">
+	        <li class="tab"><a class="active" href="#test1">Material Design</a></li>
+	        <li class="tab"><a class="active" href="#test2">Javascript</a></li>
+	        <li class="tab"><a class="active" href="#test3">TO-DO list</a></li>
+	        <li class="tab"><a class="active" href="#test4">Q&A</a></li>
+	      </ul>
+	    </div>
+  	</nav>
+</header>
+<div class="container">
+	<section id="test1">
+		<h2 class="pink lighten-5">Material design</h2>
+		<p>Design language created by Google, it combines the golden rules for successful design with innovation and technology. The goal that Google has in mind is to develop a system that allows for unified user experience across all their devices and platforms.</p>
+		<h4>Principles</h4>
+		<ul class="bullet-list">
+			<li class="collection-item">
+				<strong>Material is the metaphor.</strong>
+				<br>
+				<p>Material stands for the relationship between space and motion. Technology inspired by paper and ink with the intention to facilitate creativity and innovation.</p>
+			</li>
+			<li class="collection-item">
+				<strong>Intuitive and natural surfaces.</strong>
+				<br>
+				<p>Single underlying system where surfaces and edges provide visual cues and have familiar tactile attributes.</p>
+			</li>
+			<li class="collection-item">
+				<strong>Interaction through dimensionality.</strong>
+				<br>
+				<p>Realistic lighting to divide spaces and indicate movements without breaking rules of physics. </p>
+			</li>
+			<li class="collection-item">
+				<strong>One adaptive design.</strong>
+				<br>
+				<p>Organizes interactions and space where different views of the system are presented according to the device used. Colors, iconography and spatial relationships should remain costant.</p>
+			</li>
+			<li class="collection-item">
+				<strong>Bold, graphic and intentional content.</strong>
+				<br>
+				<p>It creates hierarchy, meaning, foucs and emphasizes users actions. Includes deliberate color choices, edege to edege images, typography, intentional white space. </p>
+			</li>
+			<li class="collection-item">
+				<strong>Emphasize action trough color and iconography.</strong>
+				<br>
+				<p>Provides waypoints for the users.</p>
+			</li>
+			<li class="collection-item">
+				<strong>Users inititate change.</strong>
+				<br>
+				<p>Reinforces the user as a primary mover.</p>
+			</li>
+			<li class="collection-item">
+				<strong>Animation choreographed on main stage.</strong>
+				<br>
+				<p>All actions take place in a single environments to avoid objects from breaking continuity of experience.</p>
+			</li>
+			<li class="collection-item">
+				<strong>Motion provides meaning</strong>
+				<br>
+				<p>Focuses users attention and manintains continuity with efficient and coherent transitions. </p>
+			</li>
+		</ul>
+	</section>
+	<div class="divider"></div>
+	</div>
+	<header>
+		<h1 class="blue-grey lighten-4">Lab 4: Fundamentos de JavaScript</h1>
+	</header>
+	<div class="container">
+	<section id="test2">
+			<section id="ejercicios">
+				<h2 class="pink lighten-5">Ejercicios JavaScript</h2>
+			<article id="e1">
+			<div class="row">
+			    <div class="col s6">
+			      <div class="card hoverable">
+			        <span class="card-title">Ejercicio 1</span>
+			        <div class="divider"></div>
+			        <div class="card-content">
+			          <p>Entrada: un número pedido con un prompt. Salida: Una tabla con los números del 1 al número dado con sus cuadrados y cubos. Utiliza document.write para producir la salida.</p>
+			        </div>
+			        <div class="card-action">
+			          <button onclick="crearTabla()" class="waves-effect waves-light btn-large pink accent-3">GENERAR TABLA</button>
+			        </div>
+			      </div>
+			    </div>
+			    <div class="col s6">
+			      <div class="card hoverable">
+			        <span class="card-title">Ejercicio 2</span>
+			        <div class="divider"></div>
+			        <div class="card-content">
+			          <p>Entrada: Usando un prompt se pide el resultado de la suma de 2 números generados de manera aleatoria. Salida: La página debe indicar si el resultado fue correcto o incorrecto, y el tiempo que tardó el usuario en escribir la respuesta.</p>
+			        </div>
+			        <div class="card-action">
+			          <button class="waves-effect waves-light btn-large pink accent-3" onclick="sumatoria()">SUMAR</button>
+			        </div>
+			      </div>
+			    </div>
+			</div>
+			<div></div>
+			<div class="row">
+			    <div class="col s6">
+			      <div class="card hoverable">
+			        <span class="card-title">Ejercicio 3</span>
+			        <div class="divider"></div>
+			        <div class="card-content">
+			          <p>Función: contador. Parámetros: Un arreglo de números. Regresa: La cantidad de números negativos en el arreglo, la cantidad de 0's, y la cantidad de valores mayores a 0 en el arreglo.</p>
+			        </div>
+			        <div class="card-action">
+			          <button class="waves-effect waves-light btn-large pink accent-3" onclick="contador([0, 0, 1, -1, 2, 0]).toString()">CONTAR</button>
+			        </div>
+			      </div>
+			    </div>
+			    <div class="col s6">
+			      <div class="card hoverable">
+			        <span class="card-title">Ejercicio 4</span>
+			        <div class="divider"></div>
+			        <div class="card-content">
+			          <p>Función: promedios. Parámetros: Un arreglo de arreglos de números. Regresa: Un arreglo con los promedios de cada uno de los renglones de la matriz.</p>
+			        </div>
+			        <div class="card-action">
+			          <button class="waves-effect waves-light btn-large pink accent-3" onclick="promedios([[4,6,0],[2,1,5],[3,9,7]]).toString()">PROMEDIAR</button>
+			        </div>
+			      </div>
+			    </div>
+			</div>
+
+			<div class="row">
+			    <div class="col s6">
+			      <div class="card hoverable">
+			        <span class="card-title">Ejercicio 5</span>
+			        <div class="divider"></div>
+			        <div class="card-content">
+			          <p>Función: inverso. Parámetros: Un número. Regresa: El número con sus dígitos en orden inverso.</p>
+			        </div>
+			        <div class="card-action">
+			          <button class="waves-effect waves-light btn-large pink accent-3" onclick="invertir(123456)">INVERTIR</button>
+			        </div>
+			      </div>
+			    </div>
+			    <div class="col s6">
+			      <div class="card hoverable">
+			        <span class="card-title">Ejercicio 6</span>
+			        <div class="divider"></div>
+			        <div class="card-content">
+			          <p>Decidí hacer una lista de tareas donde cada task nuevo es un objeto que tiene de atributos el texto y un boolean completado. El objeto puede ser marcado como completado o eliminado.</p>
+			        </div>
+			        <div class="card-action">
+			          <a class="active " href="#test3">GO TO TO-DO LIST</a>
+			        </div>
+			      </div>
+			    </div>
+			</div>
+			</article>
+			<article>
+				<section id="test3">
+					<div id="myDIV" class="header hoverable">
+	  				<h4>MY TO-DO LIST</h4>
+	  				<input type="text" id="taskInput" placeholder="ENTER A TASK HERE">
+	  				<button onclick="addTask()" class="addBtn">ADD TASK</button>
+					</div>
+					<ul id="myTasks">
+					</ul>
+				</section>
+			</article>
+		</section>
+		<section id="test4">
+			<article>
+				<h2 class="pink lighten-5">Q & A</h2>
+				<ol>
+					<li>
+						<strong class="text-bold">¿Qué diferencias y semejanzas hay entre Java y JavaScript?</strong>
+						<table class="highlight">
+							<thead>
+							<tr>
+								<th>JavaScript</th>
+								<th>Java</th>
+							</tr>
+							</thead>
+							<tbody>
+							<tr>
+								<td>Lenguaje interpretado basado en objetos.</td>
+								<td>Lenguaje compilado orientado a objetos y de propósito general. </td>
+							</tr>
+							<tr>
+								<td>Lenguaje basado en un estándar abierto para la implementación libre del mismo en cualquier sistema.</td>
+								<td>Lenguaje con enfoque particular y comercial perteneciente a Oracle. </td>
+							</tr>
+							<tr>
+								<td>Lenguaje levemente tipado.</td>
+								<td>Lenguaje fuertemente tipado.</td>
+							</tr>
+							<tr>
+								<td>Las referencias a objetos se comprueban en tiempo de ejecución.</td>
+								<td>Las referencias a objetos se comprueban en tiempo de compilación.</td>
+							</tr>
+							<tr>
+								<td>Es considerado un lenguaje seguro para páginas web pues no es capaz de escribir en disco duro, a excepción de las cookies.</td>
+							</tr>
+							</tbody>
+						</table>
+					</li>
+					<br>
+					<li>
+						<strong>¿Qué métodos tiene el objeto Date?</strong>
+						<ul class="bullet-list">
+							<li class="collection-item">getFullYear()</li>
+							<li class="collection-item">getDay()</li>
+							<li class="collection-item">getMinutes()</li>
+							<li class="collection-item">getSeconds</li>
+							<li class="collection-item">toString()</li>
+						</ul>
+					</li>
+					<br>
+					<li>
+						<strong>¿Qué métodos tienen los arreglos?</strong>
+						<ul>
+							<li>
+								<strong>.forEach</strong>: Se ejecuta una vez por cada elemento en el arreglo
+							</li>
+							<li><strong>.map</strong>: Se ejecuta una vez por cada elemento del arreglo que crea uno nuevo.<br>Si no se usará el nuevo arreglo se depe optar por el método anterior. 
+							</li>
+							<li>
+								<strong>.find</strong>: Retorna el valor del primer elemento del arreglo que cumpla la condición.
+							</li>
+							<li>
+								<strong>.filter</strong>: Crea un nuevo arreglo con los elementos que pasan una condición.
+							</li>
+							<li>
+								<strong>.reduce</strong>: Ejecuta una función que retorna un acumulado como valor único.
+							</li>
+							<li>
+								<strong>.some</strong>: Verifica si un elemento que cumpla la condición existe o no en el arreglo 
+							</li>
+						</ul>
+					</li>
+					<br>
+					<li>
+						<strong>¿Cómo se declara una variable con alcance local dentro de una función?</strong><br><br>
+						<strong>function creaMensaje()</strong> {<br>
+	  						&nbsp; <u>var mensaje = “Esta es una variable local”;</u><br>
+						}			<br>		
+						creaMensaje();<br>
+						alert(mensaje);<br>
+					</li>
+					<br>
+					<li>
+						<strong>¿Qué implicaciones tiene utilizar variables globales dentro de funciones?</strong><br>
+						Si una variable se declara de manera implícita dentro de una función su alcance es global. Es mejor declarar variables como locales para evitar contaminar el objeto global.
+					</li>
+					<br>
+					<li>
+						<strong>¿Qué método de String se puede utilizar para buscar patrones con expresiones regulares?¿Para qué podrías utilizar esto en una aplicación web?</strong><br>
+						El método regex, se podría utilizar para la verificación del ingreso de datos por parte del usuario en formas presentes en la página web.
+					</li>
+				</ol>
+			</article>
+		</section>
+	</section>
+</div>
+	<footer class="page-footer pink accent-3">
+		María de los Ángeles Contreras Anaya &nbsp;&nbsp;&nbsp; A01700284
+		<div class="footer-copyright">
+			© 2020 Designed with MATERIALIZE
+		</div>
+	</footer>
+
+	<!-- Javascript imports -->
+	<script type="text/javascript" src="functions.js"></script>
+	<script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>
