@@ -38,6 +38,7 @@ $n = 7;
 
 <h3>Función 5</h3>
 <p>Problema libre donde se le de solución en php y con una vista agradable para el usuario.</p>
+<h2>Conversor de millas a kilómetros</h2>
 
 
 <?php 
@@ -100,6 +101,12 @@ function cubos($n){
     	 echo "<td>" . (pow($x,3)) . "</td>"; 
     }
 }
+
+/*PROBLEMA LIBRE*/
+include("conversor.html");
+  $miles = $_GET['miles'];
+  $kilometers = $miles*(1.60934);
+  echo $miles . " MILLAS SON EQUIVALENTES A ".$kilometers . " KILÓMETROS";
 
 include("questions.html");
 include("footer.html");
