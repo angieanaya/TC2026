@@ -1,0 +1,165 @@
+header{
+	background-color: #4062BB;
+	text-align: center;
+	color: white;
+}
+h1{
+	font-family: 'Baloo Da', cursive;
+	font-size: 45px;
+}
+h2{
+	font-family: 'Baloo Da', cursive;
+	font-size: 35px;
+	text-align: center;
+	background-color: #748CCD;
+  color: white;
+}
+h3{
+	font-family: 'Baloo Da', cursive;
+	font-size: 20px;
+	text-align: left;
+	padding-left: 10px;
+}
+h4{
+	font-family: 'Baloo Da', cursive;
+	font-size: 20px;
+	text-align: center;
+  margin-bottom: 2px;
+}
+p{
+  padding-left: 10px;
+}
+#tableQ{
+	border-radius: 2px;
+}
+body{
+	background-color: #DCE2F2;
+}
+th{
+	background-color:black;
+  color: white;
+}
+td{
+	border: 0.5px solid white;
+  background-color:black;
+  color: white;
+  padding: 5px;
+}
+p{
+	font-family: 'Montserrat', cursive;
+}
+ol{
+	font-family: 'Montserrat', cursive;
+}
+li{
+	font-family: 'Montserrat', cursive;
+	padding: 5px;
+}
+strong{
+	font-family: 'Montserrat', sans-serif;
+}
+footer{
+	background-color: #4062BB;
+	color: white;
+	padding:10px;
+	text-align: center;
+}
+
+/*Styles for login*/ 
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 5px 20px;
+  margin: 10px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4062BB;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #F45B69;
+}
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+.closeContainer {
+  text-align: center;
+  margin: 12px 0 5px 0;
+  position: relative;
+}
+
+img{
+  width: 20%;
+  height: auto; 
+}
+
+.modal {
+  font-family: 'Montserrat', sans-serif;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto;
+  border: 1px solid #DCE2F2;
+  width: 80%;
+}
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.start{
+  margin-left: 43%;
+  width: 100px;
+}
+.close:hover,
+.close:focus {
+  color: #F45B69;
+  cursor: pointer;
+}
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}

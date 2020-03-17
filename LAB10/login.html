@@ -1,0 +1,29 @@
+<section>
+<h2>Forms with php</h2>
+<button class="start" onclick="document.getElementById('loginForm').style.display='block'"">Login</button>
+
+<div id="loginForm" class="modal">
+  <form class="modal-content animate" action="matchUser.php" method="post">
+    <div class="closeContainer">
+      <span onclick="document.getElementById('loginForm').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button type="submit">Login</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container">
+      <button type="button" onclick="document.getElementById('loginForm').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+</section>

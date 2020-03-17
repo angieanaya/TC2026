@@ -1,0 +1,69 @@
+<section>	
+		<h2>Q & A</h2>
+		<ul>
+			<li>
+				<strong>¿Por qué es una buena práctica separar el controlador de la vista?</strong><br>
+		Es una buena práctica separar la lógica del sistema de la interfaz porque permite la modificación de componentes sin necesidad de afectar a los demás, más aún permite separar las entradas y salidas del sistema de la parte con la que interactúa el sistema. [1]
+			</li>
+			<li>
+				<strong>Aparte de los arreglos $_POST y $_GET, ¿qué otros arreglos están predefinidos en php y cuál es su función?</strong><br>
+        <ul>
+          <li>
+            <strong>$_SERVER</strong><br>
+            Array that contains information like header, routes and script locations.
+          </li>
+          <li>
+            <strong>$_COOKIE</strong><br>
+            An associative array of variables passed to the current script via HTTP Cookies.
+          </li>
+          <li>
+            <strong>$_SESSION</strong><br>
+            An associative array containing session variables available to the current script.
+          </li>
+          <li>
+            <strong>$_REQUEST</strong><br>
+            An associative arraythat by default contains the contents of $_GET, $_POST and $_COOKIE. 
+          </li>
+        </ul>
+        [2]
+			</li>
+			<li>
+				<strong>Explora las funciones de php, y describe 2 que no hayas visto en otro lenguaje y que llamen tu atención.</strong><br>
+        <ul>
+          <li>
+            <strong>image2wbmp </strong><br>
+            Exportar la imagen al navegador o a un fichero
+          </li>
+          <li>
+            <strong>imagegammacorrect</strong><br>
+          Aplica una corrección gamma a $image, dada una entrada y una salida gamma.
+          </li>
+        </ul>
+        [3]
+			</li>
+      <li>
+        <strong>¿Qué es XSS y cómo se puede prevenir?</strong><br>
+        Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are introduced into otherwise benign and trusted websites. 
+        <br> <br>
+        Generally an attacker will sedn in the form of a browser side script, to a different and unsuspecting end user.The end user’s browser has no way to know that the script should not be trusted, and will execute the script. Because it thinks the script came from a trusted source, the malicious script can access any cookies, session tokens, or other sensitive information retained by the browser and used with that site. These scripts can even rewrite the content of the HTML page. [4]
+         <br> <br>
+        You can prevent XSS attacks by escaping your output using htmlspecialchars() or htmlentities(). Both PHP functions convert problematic characters into HTML entities causing the injected code to be output harmlessly and not rendered but it’s generally recommended to use htmlspecialchar. [5]
+      </li>
+		</ul>
+	</section>
+	<section>
+		<h2>Referencias</h2>
+		<ul>
+			<li>[1] https://codingornot.com/mvc-modelo-vista-controlador-que-es-y-para-que-sirve</li>
+			<li>[2]https://www.php.net/manual/en/reserved.variables</li>
+			<li>
+        [3] https://www.php.net/manual/es/functions.internal.php
+      </li>
+      <li>
+        [4] https://owasp.org/www-community/attacks/xss/
+      </li>
+      <li>
+        [5] https://medium.com/@jpmorris/how-to-prevent-xss-attacks-by-escaping-output-in-php-942204bf184>
+      </li>
+		</ul>
+	</section>
