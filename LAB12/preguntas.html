@@ -1,72 +1,40 @@
-<section>	
-		<h2>Q & A</h2>
-		<ul>
-			<li>
-				<strong>¿Por qué es una buena práctica separar el controlador de la vista?</strong><br>
-		Es una buena práctica separar la lógica del sistema de la interfaz porque permite la modificación de componentes sin necesidad de afectar a los demás, más aún permite separar las entradas y salidas del sistema de la parte con la que interactúa el sistema. [1]
-			</li>
-			<li>
-				<strong>Aparte de los arreglos $_POST y $_GET, ¿qué otros arreglos están predefinidos en php y cuál es su función?</strong><br>
-        <ul>
-          <li>
-            <strong>$_SERVER</strong><br>
-            Array that contains information like header, routes and script locations.
-          </li>
-          <li>
-            <strong>$_COOKIE</strong><br>
-            An associative array of variables passed to the current script via HTTP Cookies.
-          </li>
-          <li>
-            <strong>$_SESSION</strong><br>
-            An associative array containing session variables available to the current script.
-          </li>
-          <li>
-            <strong>$_REQUEST</strong><br>
-            An associative arraythat by default contains the contents of $_GET, $_POST and $_COOKIE. 
-          </li>
-        </ul>
-        [2]
-			</li>
-			<li>
-				<strong>Explora las funciones de php, y describe 2 que no hayas visto en otro lenguaje y que llamen tu atención.</strong><br>
-        <ul>
-          <li>
-            <strong>image2wbmp </strong><br>
-            Exportar la imagen al navegador o a un fichero
-          </li>
-          <li>
-            <strong>imagegammacorrect</strong><br>
-          Aplica una corrección gamma a $image, dada una entrada y una salida gamma.
-          </li>
-        </ul>
+
+<section> 
+    <h2>Q & A</h2>
+    <ul>
+      <li>
+        <strong>¿Por qué es importante hacer un session_unset() y luego un session_destroy()?</strong><br>
+        Es importante porque session_unset() solo se encarga de limpiar la variable $_SESSION, por lo tanto, sólo afecta de manera local y no la información de sesión guardada. Es por eso que se debe hacer un session destroy para que la información guardada también sea destruida, removiendo así la sesión por completo. [1]
+      </li>
+      <li>
+        <strong>¿Cuál es la diferencia entre una variable de sesión y una cookie?</strong><br>
+        Una cookie es un fragmento de información que un navegador web almacena en el disco duro del visitante a una página web. La información se almacena a petición del servidor web y puede ser recuperada por el servidor web en posteriores visitas a la misma página.
+        <br><br>
+        Gracias a las cookies se puede compartir información entre distintas páginas de un sitio web o incluso en la misma página web pero en diferentes instantes de tiempo, resolviendo así el problema del protocolo HTTP siendo el sin estado. 
+        <br><br>
+        Una sesión es un mecanismo de programación de las tecnologías de web scripting que permite conservar información sobre un usuario al pasar de una página a otra. A diferencia de una cookie, los datos asociados a una sesión se almacenan en el servidor y nunca en el cliente. [2]
+      </li>
+      <li>
+        <strong>¿Qué técnicas se utilizan en sitios como facebook para que el usuario no sobreescriba sus fotos en el sistema de archivos cuando sube una foto con el mismo nombre?</strong><br>
         [3]
-			</li>
-      <li>
-        <strong>¿Qué es XSS y cómo se puede prevenir?</strong><br>
-        Cross-Site Scripting (XSS) attacks are a type of injection, in which malicious scripts are introduced into otherwise benign and trusted websites. 
-        <br> <br>
-        Generally an attacker will sedn in the form of a browser side script, to a different and unsuspecting end user.The end user’s browser has no way to know that the script should not be trusted, and will execute the script. Because it thinks the script came from a trusted source, the malicious script can access any cookies, session tokens, or other sensitive information retained by the browser and used with that site. These scripts can even rewrite the content of the HTML page. [4]
-         <br> <br>
-        You can prevent XSS attacks by escaping your output using htmlspecialchars() or htmlentities(). Both PHP functions convert problematic characters into HTML entities causing the injected code to be output harmlessly and not rendered but it’s generally recommended to use htmlspecialchar. [5]
-      </li>
-		</ul>
-	</section>
-	<section>
-		<h2>Referencias</h2>
-		<ul>
-			<li>[1] https://codingornot.com/mvc-modelo-vista-controlador-que-es-y-para-que-sirve</li>
-			<li>[2]https://www.php.net/manual/en/reserved.variables</li>
-			<li>
-        [3] https://www.php.net/manual/es/functions.internal.php
       </li>
       <li>
-        [4] https://owasp.org/www-community/attacks/xss/
+        <strong>¿Qué es CSRF y cómo puede prevenirse?</strong><br>
+        CSRF (acrónimo de *Cross-site request forgery*) es un método por el cual un usuario malintencionado intenta hacer que tus usuarios, sin saberlo, envíen datos que no quieren enviar. Para evitar estas situaciones es necesario añadir un *token* CSRF (campo oculto) a tus formularios.[4]
+  </section>
+  <section>
+    <h2>Referencias</h2>
+    <ul>
+      <li>[1] https://stackoverflow.com/questions/4303311/what-is-the-difference-between-session-unset-and-session-destroy-in-php</li>
+      <li>[2]http://idesweb.es/proyecto/proyecto-prac09-php-cookies-sesiones</li>
+      <li>
+        [3]
       </li>
       <li>
-        [5] https://medium.com/@jpmorris/how-to-prevent-xss-attacks-by-escaping-output-in-php-942204bf184>
+        [4] https://uniwebsidad.com/libros/symfony-2-4/capitulo-12/proteccion-csrf
       </li>
-		</ul>
-	</section>
+    </ul>
+  </section>
     <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
