@@ -1,0 +1,64 @@
+h2{
+	font-size: 50px;
+}
+h3{
+	text-align: center;
+	padding-top: 10px;
+}
+h5{
+	text-align: center;
+	color: black;
+}
+
+p{
+	color: black;
+}
+#datosPersonales{
+	display: block;
+	position: relative;
+}
+#datosIngreso{
+	display: none;
+	position: relative;
+}
+#datosFamiliares{
+	display: none;
+	position: relative;
+}
+#archivosVarios{
+	display: none;
+	position: relative;
+}
+#registroExitoso{
+	display: none;
+	position: relative;
+}
+.form-control{
+	margin-right: 10px;
+}
+#edadBenef{
+	width: 100px;
+}
+#curpBenef{
+	width: 200px;
+}
+#leftSide{
+	margin-left: 10px;
+}
+strong{
+	color: black;
+}
+.btn{
+	margin: 10px 10px 0px 0px;
+}
+.row{
+	margin-bottom: 25px;
+}
+#next1,#next2,#next3{
+  background-color: #f0037f;
+  color: white;
+  border-color: white;
+}
+.footer{
+  background-color: lightblue;
+}
