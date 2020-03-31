@@ -1,0 +1,30 @@
+<div class="container">
+	<section id="datosPersonales">
+		<h3>DATOS PERSONALES</h3>
+	<div class="row">
+		<form action="cargarDatos.php" enctype="multipart/form-data" method="post" autocomplete="off">
+			<div class="col-sm">
+	  		<div class="form-group">
+	  			<i class="fas fa-user"></i>
+	    		<label for="nombreBenef">Nombre:</label>
+	    		<div class="form-inline">
+	    			<input pattern="[[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'- ]" type="text" class="form-control"  placeholder="Nombre" id="nombreBenef" name="nombreBenef" required>
+	    			<input pattern="[[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'- ]" type="text" class="form-control" placeholder="Apellido paterno" id="primerAp" name="primerAp" required>
+	    			<input pattern="[[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'- ]" type="text" class="form-control" placeholder="Apellido materno" id="segundoAp" name="segundoAp" required>
+	    		</div>
+	  		</div>
+	  		<div class="form-group>
+	  			<label for="edadBenef">Edad:</label>
+	    		<input class="form-control" type="number" value="" placeholder="20" id="edadBenef" min="1" max="100" name="edadBenef">
+	    	</div>
+        <div class="col-6 sm">
+          <div class="form-group">
+            <label for="expedienteEscolar">Foto</label>
+            <input type="file" id="fileToUpload" name="fileToUpload"  class="form-control-file">
+          </div>
+        </div>
+                <center><button type="submit" class="btn btn-primary" id="toSubmit" onclick="submitBeneficiarias()">GUARDAR</button></center>
+		</form>
+	</div>
+	</section>
+	</div>

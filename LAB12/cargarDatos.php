@@ -1,4 +1,18 @@
 <?php
+session_start();
+
+//variables de sesión
+$_SESSION['nombreBenef'] = $_POST['nombreBenef'];
+$_SESSION['primerAp'] = $_POST['primerAp'];
+$_SESSION['segundoAp'] = $_POST['segundoAp'];
+
+//aignación de variables 
+$foto = "uploads/".$_FILES["fileToUpload"]["name"];
+$nombreBenef = htmlspecialchars($_POST["nombreBenef"]);
+$primerAp = htmlspecialchars($_POST["primerAp"]);
+$segundoAp = htmlspecialchars($_POST["segundoAp"]);
+$edadBenef = htmlspecialchars($_POST["edadBenef"]);
+
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
@@ -41,4 +55,9 @@ if ($uploadOk == 0) {
         echo "Sorry, there was an error uploading your file.";
     }
 }
+
+//TO VIEW IN ANOTHER PAGE
+include("header.html");
+include("body.html");
+include("footer.html");
 ?>

@@ -1,4 +1,5 @@
 
+
 <section> 
     <h2>Q & A</h2>
     <ul>
@@ -16,7 +17,7 @@
       </li>
       <li>
         <strong>¿Qué técnicas se utilizan en sitios como facebook para que el usuario no sobreescriba sus fotos en el sistema de archivos cuando sube una foto con el mismo nombre?</strong><br>
-        [3]
+        Se verifica la existencia de un archivo de mismo nombre antes de moverlo al directorio correspondiente, si no existe se guarda con el nombre sin modificar, pero cuando si existe se renombra con un infijo numérico.
       </li>
       <li>
         <strong>¿Qué es CSRF y cómo puede prevenirse?</strong><br>
@@ -27,9 +28,6 @@
     <ul>
       <li>[1] https://stackoverflow.com/questions/4303311/what-is-the-difference-between-session-unset-and-session-destroy-in-php</li>
       <li>[2]http://idesweb.es/proyecto/proyecto-prac09-php-cookies-sesiones</li>
-      <li>
-        [3]
-      </li>
       <li>
         [4] https://uniwebsidad.com/libros/symfony-2-4/capitulo-12/proteccion-csrf
       </li>
