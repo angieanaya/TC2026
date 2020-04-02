@@ -1,0 +1,28 @@
+<?php
+require_once("util.php");
+
+include("header.html"); 
+include("body.html"); 
+include("_form.html"); 
+
+if (isset($_POST["Autores"])) {
+      $Autores = htmlspecialchars($_POST["Autores"]);
+      //echo $_POST["Autores"];
+  } else {
+      $Autores = "";
+}
+
+if (isset($_POST["Generos"])) {
+      $Generos = htmlspecialchars($_POST["Generos"]);
+      //echo $_POST["Generos"];
+  } else {
+      $Generos = "";
+}
+
+
+
+echo consultar($Autores, $Generos);
+
+include("preguntas.html"); 
+include("footer.html"); 
+?>

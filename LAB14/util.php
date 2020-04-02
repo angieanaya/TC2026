@@ -1,45 +1,80 @@
-function connectDb(){
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "dbname";
-
-	$con = mysqli_connect($servername, $username, $password, $dbname);
-
-	if(!$con){
-		die("Connection failed: " . mysqli_conect_error());
-	}
-
-	return $con;
-}
-
-function closeDb($mysql){
-	mysqli_close($mysql);
-}
-
-function getObjects(){
-	$conn = connectDb();
-	$sql = "SELECT name, unit, quantity, price, country FROM Fruit";
-	$result = mysqli_query($con, $sql);
-	closeDb($con)
-	return $result;
-}
-
 <?php
-	require_once "util.php";
 
-	$result = getObjects();
+//Función para conectarnos a la base de datos
+function conectDB(){
+  $conexion_db = mysqli_connect("localhost","root","","LAB14");
+      if ($conexion_db == NULL) {
+          die("No se pudo conectar con la base de datos");
+      }
+      return $conexion_db;
+}
 
-	if(mysql_num_rows($result) > 0){
-		while ($row = mysqli_fetch_assoc($result)) {
-			echo "<tr>";
-			echo "<td>" . $row[""] . "<td>";
-			echo "<td>" . $row[""] . "<td>";
-			echo "<td>" . $row[""] . "<td>";
-			echo "<td>" . $row[""] . "<td>";
-			echo "<td>" . $row[""] . "<td>";
-			echo "<tr>";
-		}
-	}
+//Función para desconectarnos de la base de datos
+function closeDB($conexion_db){
+   mysqli_close($conexion_db);
+}
+
+
+//Depliega todos los libros existentes con el autor y género correspondiente
+
+function consultar($Autores="", $Generos=""){
+  $conexion_db = conectDB();
+  
+  $resultado =  "<center><table><thead><tr><th>Título</th><th>Autor</th><th>Género</th></tr></thead>";
+    
+  $consulta = 'Select Titulo, A.Nombre as autorNom, G.Nombre as generoNom From Libros as L, Autores as A, Generos as G Where L.idGenero = G.idGenero AND L.idAutor = A.idAutor';
+  
+  if ($Autores != "") {
+        $consulta .= " AND A.idAutor=".$Autores;
+  }
+
+  if ($Generos != "") {
+        $consulta .= " AND G.idGenero=".$Generos;
+  }
+
+  //echo $consulta;
+
+      
+  $resultados = $conexion_db->query($consulta);  
+  while ($row = mysqli_fetch_array($resultados, MYSQLI_ASSOC)){
+        $resultado .= "<tr>";
+        $resultado .= "<td>".$row['Titulo']."</td>"; //Se puede usar el índice de la consulta
+        $resultado .= "<td>".$row['autorNom']."</td>"; //o el nombre de la columna
+        $resultado .= "<td>".$row['generoNom']."</td>";
+        $resultado .= "</tr>";
+  }
+    
+  mysqli_free_result($resultados); //Liberar la memoria
+
+  closeDB($conexion_db);
+
+        
+  $resultado .= "</tbody></table></center>";
+  return $resultado;
+}
+
+
+//Crea un select con los datos de una consulta
+  //@param $id: Campo en una tabla que contiene el id
+  //@param $columna_descripcion: Columna de una tabla con una descripción
+  //@param $tabla: La tabla a consultar en la bd
+
+  function crear_select($id, $columna_descripcion, $tabla) {
+    $conexion_bd = conectDB(); 
+    
+    $resultado = '<div class="custom-select"><select name="'.$tabla.'"><option value="" disabled selected>SELECCIONA UNA OPCIÓN</option>';
+            
+    $consulta = "SELECT $id, $columna_descripcion FROM $tabla";
+    $resultados = $conexion_bd->query($consulta);
+    while ($row = mysqli_fetch_array($resultados, MYSQLI_BOTH)) {
+       $resultado .= '<option value="'.$row["$id"].'">'.$row["$columna_descripcion"].'</option>';
+    }
+
+    $resultado .=  '</select><label></label></div><br>';
+        
+    closeDB($conexion_bd);
+    
+    return $resultado;
+  }
 ?>
 
