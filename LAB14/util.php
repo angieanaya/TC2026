@@ -14,31 +14,33 @@ function closeDB($conexion_db){
    mysqli_close($conexion_db);
 }
 
-function consultar($Titulo="", $idAutor="", $idGenero=""){
+
+//Depliega todos los libros existentes con el autor y género correspondiente
+
+function consultar($Autores="", $Generos=""){
   $conexion_db = conectDB();
   
-  $resultado =  "<table><thead><tr><th>Título</th><th>Autor</th><th>Género</th></tr></thead>";
+  $resultado =  "<center><table><thead><tr><th>Título</th><th>Autor</th><th>Género</th></tr></thead>";
     
-  $consulta = 'Select Titulo, idGenero, idAutor From Libros';
+  $consulta = 'Select Titulo, A.Nombre as autorNom, G.Nombre as generoNom From Libros as L, Autores as A, Generos as G Where L.idGenero = G.idGenero AND L.idAutor = A.idAutor';
   
-  if ($Titulo != "") {
-        $consulta .= " AND titulo=".$Titulo;
-  }
-  
-  if ($idGenero != "") {
-        $consulta .= " AND idGenero=".$idGenero;
+  if ($Autores != "") {
+        $consulta .= " AND A.idAutor=".$Autores;
   }
 
-  if ($idAutor != "") {
-        $consulta .= " AND idAutor=".$idAutor;
+  if ($Generos != "") {
+        $consulta .= " AND G.idGenero=".$Generos;
   }
+
+  //echo $consulta;
+
       
   $resultados = $conexion_db->query($consulta);  
-  while ($row = mysqli_fetch_array($resultados, MYSQLI_BOTH)) {
+  while ($row = mysqli_fetch_array($resultados, MYSQLI_ASSOC)){
         $resultado .= "<tr>";
         $resultado .= "<td>".$row['Titulo']."</td>"; //Se puede usar el índice de la consulta
-        $resultado .= "<td>".$row['idAutor']."</td>"; //o el nombre de la columna
-        $resultado .= "<td>".$row['idGenero']."</td>";
+        $resultado .= "<td>".$row['autorNom']."</td>"; //o el nombre de la columna
+        $resultado .= "<td>".$row['generoNom']."</td>";
         $resultado .= "</tr>";
   }
     
@@ -47,26 +49,31 @@ function consultar($Titulo="", $idAutor="", $idGenero=""){
   closeDB($conexion_db);
 
         
-  $resultado .= "</tbody></table>";
+  $resultado .= "</tbody></table></center>";
   return $resultado;
 }
+
+
 //Crea un select con los datos de una consulta
   //@param $id: Campo en una tabla que contiene el id
   //@param $columna_descripcion: Columna de una tabla con una descripción
   //@param $tabla: La tabla a consultar en la bd
+
   function crear_select($id, $columna_descripcion, $tabla) {
-    $conexion_bd = conectDB();  
-      
-    $resultado = '<div class="input-field"><select name="'.$tabla.'"><option value="" disabled selected>Selecciona una opción</option>';
+    $conexion_bd = conectDB(); 
+    
+    $resultado = '<div class="custom-select"><select name="'.$tabla.'"><option value="" disabled selected>SELECCIONA UNA OPCIÓN</option>';
             
-    $consulta = "SELECT $id as id , $columna_descripcion as colum FROM $tabla";
+    $consulta = "SELECT $id, $columna_descripcion FROM $tabla";
     $resultados = $conexion_bd->query($consulta);
     while ($row = mysqli_fetch_array($resultados, MYSQLI_BOTH)) {
-       $resultado .= '<option value="'.$row["id"].'">'.$row["colum"].'</option>';
+       $resultado .= '<option value="'.$row["$id"].'">'.$row["$columna_descripcion"].'</option>';
     }
+
+    $resultado .=  '</select><label></label></div><br>';
         
     closeDB($conexion_bd);
-    $resultado .=  '</select><label>'.$tabla.'...</label></div>';
+    
     return $resultado;
   }
 ?>

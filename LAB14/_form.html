@@ -1,5 +1,7 @@
-<form method="POST">
+<form method="post" >
+	<center><p>BUSCAR POR AUTOR</p></center>
     <?=crear_select("idAutor", "Nombre", "Autores");?>
-    
-            <input class="waves-effect waves-light btn" type="submit" value="Buscar">
+    <center><p>BUSCAR POR GÉNERO</p></center>
+    <?=crear_select("idGenero", "Nombre", "Generos");?>
+            <center><input class="btn" type="submit" value="BUSCAR"></center>
 </form>
