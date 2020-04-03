@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Lab 15: php y manipulación de registros de la base de datos</title>
+    <link rel="icon" href="laptop.png">
+	  <link rel="stylesheet" type="text/css" href="styles.css">
+	  <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css?family=Baloo+Da|Comfortaa|Montserrat|Questrial|Syncopate:700|Titan+One" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+		<h1>Lab 15: php y manipulación de registros de la base de datos</h1>
+	  </header>
+    <?php if(isset($_SESSION["warning"])): ?>
+        <?=$_SESSION["warning"] ?>
+            <?php unset($_SESSION["warning"])?>
+                <?php endif;?>
+
+                    <?php if(isset($_SESSION["mensaje"])): ?>
+                        <div class="row">
+                            <div class="col s12 m12 l12">
+                                <div class="card blue lighten-1">
+                                    <div class="card-content white-text">
+                                        <span class="card-title"><?=$_SESSION["mensaje"] ?></span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <?php unset($_SESSION["mensaje"])?>
+                            <?php endif;?>

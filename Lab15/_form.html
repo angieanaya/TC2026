@@ -1,0 +1,12 @@
+<body>
+<section>
+  <h2>M Y &nbsp&nbsp L I B R A R Y</h2>
+</section>
+<form method="post" >
+	<center><p>BUSCAR POR AUTOR</p></center>
+    <?=crear_select("idAutor", "Nombre", "Autores");?>
+    <center><p>BUSCAR POR GÉNERO</p></center>
+    <?=crear_select("idGenero", "Nombre", "Generos");?>
+            <center><input class="btn" type="submit" value="BUSCAR"></center>
+</form>
+<a class="btn" href="control.php">REGISTRAR</a>

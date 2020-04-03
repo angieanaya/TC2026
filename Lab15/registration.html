@@ -1,0 +1,12 @@
+<form method="post" action="control.php">
+	<center><label>T I T U L O</label></center>
+	<input class="textInput" type="text" name="titulo" value="" placeholder="Switched" >
+	<br>
+	<center><label>A U T O R E S</label></center>
+	<br>
+    <?=crear_select("idAutor", "Nombre", "Autores");?>
+    <center><label>G E N E R O S</label></center>
+    <br>
+    <?=crear_select("idGenero", "Nombre", "Generos");?>
+        <center><input class="btn" type="submit" value="REGISTRAR LIBRO"></center>
+</form>
