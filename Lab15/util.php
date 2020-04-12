@@ -82,33 +82,95 @@ function consultar($Autores="", $Generos=""){
   function insertarLibro($ISBN, $Titulo, $idGenero, $idAutor){
     $conexion_bd = conectDB();
 
-    $registro = 'INSERT INTO Libros(ISBN,Titulo,idGenero,idAutor) VALUES(?)';
-    echo $registro;
+    //Preparar consulta
 
-    if ( !($statement = $conexion_bd->prepare($registro)) ) {
+    $registrar = 'INSERT INTO Libros(ISBN,Titulo,idGenero,idAutor) VALUES(?, ?, ?, ?)';
+
+    if ( !($statement = $conexion_bd->prepare($registrar))) {
       die("Error: (" . $conexion_bd->errno . ") " . $conexion_bd->error);
       return 0;
     }
 
     //Unir los parámetros
-    if (!$statement->bind_param("i", $ISBN)) {
+    if (!$statement->bind_param("isii", $ISBN, $Titulo, $idAutor, $idGenero)){
       die("Error en vinculación: (" . $statement->errno . ") " . $statement->error);
       return 0;
     }
-    if (!$statement->bind_param("s", $Titulo)) {
-      die("Error en vinculación: (" . $statement->errno . ") " . $statement->error);
+  
+
+    //Ejecutar el registro del libro
+    if (!$statement->execute()) {
+      die("Error en ejecución: (" . $statement->errno . ") " . $statement->error);
       return 0;
     }
-    if (!$statement->bind_param("i", $idAutor)) {
-      die("Error en vinculación: (" . $statement->errno . ") " . 
-        $statement->error);
+
+    closeDB($conexion_bd);
+    return 1;
+  }
+
+  //Obtener el campo a modificar 
+
+  function obtenerCampo($ISBN, $campo){
+    $conexion_bd = conectDB();
+
+    $consultar = "SELECT $campo FROM Libros WHERE ISBN='$ISBN'";
+    $resultados = $conexion_bd->query($consultar);
+    while ($row = mysqli_fetch_array($resultados, MYSQLI_BOTH)) {
+      closeDB($conexion_bd);
+      return $row["$campo"];
+    }
+
+    closeDB($conexion_bd);
+    return 0;
+  }
+
+  //Función para modificar los datos ingresados de un libro
+
+  function modificarLibro($ISBN, $Titulo, $idGenero, $idAutor){
+    $conexion_bd = conectDB();
+
+    //Preparar la consulta
+    $modificar = 'UPDATE Libros SET Titulo=(?), idGenero=(?), idAutor=(?) WHERE ISBN=(?)';
+
+    if ( !($statement = $conexion_bd->prepare($modificar))) {
+      die("Error: (" . $conexion_bd->errno . ") " . $conexion_bd->error);
       return 0;
     }
-    if (!$statement->bind_param("i", $idGenero)) {
+
+    //Unir parámetros de consulta 
+    if (!$statement->bind_param("siii", $Titulo, $idGenero, $idAutor, $ISBN)) {
       die("Error en vinculación: (" . $statement->errno . ") " . $statement->error);
       return 0;
     }
 
+    //Ejecutar consulta 
+    if (!$statement->execute()) {
+      die("Error en ejecución: (" . $statement->errno . ") " . $statement->error);
+      return 0;
+    }
+
+    closeDB($conexion_bd);
+    return 1;
+  }
+
+  //Eliminar un libro 
+
+  function eliminarLibro($ISBN, $Titulo, $idGenero, $idAutor){
+    $conexion_bd = conectDB();
+
+    //Preparar la consulta
+    $eliminar = 'DELETE FROM Libros WHERE ISBN=(?) AND Titulo=(?) AND idGenero=(?) AND idAutor=(?)';
+    if ( !($statement = $conexion_bd->prepare($eliminar)) ) {
+      die("Error: (" . $conexion_bd->errno . ") " . $conexion_bd->error);
+      return 0;
+    }
+      
+    //Unir los parámetros de consulta
+    if (!$statement->bind_param("isii", $ISBN, $Titulo, $idGenero, $idAutor)) {
+      die("Error en vinculación: (" . $statement->errno . ") " . $statement->error);
+      return 0;
+    }
+      
     //Ejecutar la consulta
     if (!$statement->execute()) {
       die("Error en ejecución: (" . $statement->errno . ") " . $statement->error);
@@ -119,3 +181,4 @@ function consultar($Autores="", $Generos=""){
     return 1;
   }
 ?>
+
