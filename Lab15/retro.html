@@ -1,0 +1,11 @@
+<!--EXITO-->
+<?php if(isset($_SESSION["mensajeExito"])): ?>
+	<p><?= $_SESSION["mensaje"] ?></p>
+	<?php unset($_SESSION["mensajeExito"])?>
+<?php endif;?>
+
+<!--ERROR-->
+<?php if(isset($_SESSION["mensajeError"])): ?>
+	<p><?= $_SESSION["mensajeError"] ?></p>
+	<?php unset($_SESSION["mensajeError"])?>
+<?php endif;?>

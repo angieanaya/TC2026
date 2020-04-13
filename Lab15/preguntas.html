@@ -1,0 +1,61 @@
+<section>	
+		<h2>Q & A</h2>
+		<ul>
+			<li>
+				<strong>¿Por qué es una buena práctica separar el modelo del controlador?</strong><br>
+         Es una buena práctica pues simplifica todo el desarrollo del sitio web, facilita la reutilización de código y hace que sea mucho más mantenible.
+         <ul>
+           <li>
+             Dotar a las interfaces web una rapidez e interactividad fluida. 
+           </li>
+           <li>
+             Los datos y la lógica pueden estar centralizadas y dar servicio a multitud de interfaces de usuario.
+           </li>
+           <li>
+              El intercambio de información entre cliente y servidor es extremadamente ligero.
+           </li>
+         </ul>
+        [1]
+			</li>
+			<li>
+				<strong>¿Qué es SQL Injection?</strong><br>
+        Es una vulnerabilidad que permite al atacante enviar instrucciones SQL de forma maliciosa y malintencionada dentro del código SQL programado para la manipulación de bases de datos, poniendo de esta forma todos los datos almacenados en peligro. La finalidad de estos tipos de ataque es poder modificar del comportamiento de nuestras consultas a través de parámetros no deseados, pudiendo así falsificar identidades, obtener y divulgar información de la base de datos, borrar la base de datos, cambiar el nombre a las tablas, anular transacciones o inlcuso convertirse a sí mismo en administrador.
+        <br><br> 
+        Esto ocurre por la mala filtración de  variables en un programa, generalmente cuando solicitas a un usuario entradas de cualquier tipo y no se encuentran validadas. [2]
+			</li>
+			<li>
+				<strong>¿Cómo se puede prevenir SQL Injection?</strong><br>
+        <ul>
+          <li>
+            <strong>Escapar los caracteres especiales utilizados en las consultas SQL</strong><br>
+            Añadir la barra invertida “\” delante de las cadenas utilizadas en las consultas SQL para evitar que estas corrompan la consulta. En el caso de PHP podemos optar por la función mysql_real_scape_string(), que toma como parámetro una cadena y la modifica evitando todos los caracteres especiales, devolviéndola totalmente segura para ser ejecutada dentro de la instrucción SQL.
+          </li>
+          <li>
+            <strong>Delimitar los valores de las consultas</strong><br>
+            Aunque el valor de la consulta sea un entero, es aconsejable delimitarlo siempre entre comillas simples.
+          </li>
+          <li>
+            <strong>Verificar siempre los datos que introduce el usuario</strong><br>
+            Realizar la comprobación de campos, se puede utilizar ctype_digit() para saber si es un número o ctype_alpha () para saber si se trata de una cadena de texto en el caso del lenguaje PHP.
+            <br><br>
+            También es aconsejable comprobar la longitud de los datos para descartar posibles técnicas de inyección SQL.
+          </li>
+          <li>
+            <strong>Asignar mínimos privilegios al usuario que conectará con la base de datos</strong><br>
+            El usuario que utilicemos para conectarnos a la base de datos desde nuestro código debe tener los privilegios justos para realizar las acciones que necesitemos. No utilizar nunca un usuario root.
+          </li>
+        </ul>
+        [3]
+			</li>
+	</section>
+	<section>
+		<h2>Referencias</h2>
+		<ul>
+			<li>[1] https://www.aunitz.net/aplicaciones-web-front-end-back-end-desacoplado/ </li>
+			<li>[2] https://openwebinars.net/blog/que-es-sql-injection/</li>
+			<li>
+        [3] https://pressroom.hostalia.com/white-papers/ataques-inyeccion-sql/
+      </li>
+		</ul>
+	</section>
+  </body>
