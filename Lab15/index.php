@@ -26,6 +26,7 @@ if (isset($_POST["Generos"])) {
 
 echo consultar($Autores, $Generos);
 
+include("eliminar.html");
 include("preguntas.html"); 
 include("footer.html"); 
 ?>

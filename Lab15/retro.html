@@ -1,11 +1,15 @@
 <!--EXITO-->
 <?php if(isset($_SESSION["mensajeExito"])): ?>
-	<p><?= $_SESSION["mensaje"] ?></p>
+	<div class="alert alert-success" role="alert">
+		<?= $_SESSION["mensajeExito"] ?>
+	</div>
 	<?php unset($_SESSION["mensajeExito"])?>
 <?php endif;?>
 
 <!--ERROR-->
 <?php if(isset($_SESSION["mensajeError"])): ?>
-	<p><?= $_SESSION["mensajeError"] ?></p>
+	<div class="alert alert-danger" role="alert">
+		<?= $_SESSION["mensajeError"] ?>
+	</div>
 	<?php unset($_SESSION["mensajeError"])?>
 <?php endif;?>

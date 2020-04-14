@@ -2,10 +2,10 @@
   session_start();
   require_once("util.php");  
 
-  $ISBN = htmlspecialchars($_POST["isbn"]);
-  $Titulo = htmlspecialchars($_POST["titulo"]);
-  $Autores = htmlspecialchars($_POST["Autores"]);
-  $Generos = htmlspecialchars($_POST["Generos"]);
+  $ISBN = htmlspecialchars($_GET["ISBN"]);
+  $Titulo = obtenerCampo($ISBN, "Titulo");
+  $idAutor = obtenerCampo($ISBN, "idAutor");
+  $idGenero = obtenerCampo($ISBN, "idGenero");
   
   
   if(isset($ISBN) && isset($Titulo) && isset($idGenero) && isset($idAutor))

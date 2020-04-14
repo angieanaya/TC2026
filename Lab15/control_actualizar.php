@@ -2,14 +2,19 @@
 	session_start();
 	require_once("util.php");
 
-  $ISBN = htmlspecialchars($_POST["isbn"]);
-  $Titulo = htmlspecialchars($_POST["titulo"]);
+  $ISBN = htmlspecialchars($_POST["ISBN"]);
+  $Titulo = htmlspecialchars($_POST["Titulo"]);
   $Autores = htmlspecialchars($_POST["Autores"]);
   $Generos = htmlspecialchars($_POST["Generos"]);
 
-	if(isset($ISBN) && isset($Titulo) && isset($idGenero) && isset($idAutor))
+	if(isset($ISBN) && isset($Titulo) && isset($Autores) && isset($Generos))
   	{
-		if(modificarLibro($ISBN, $Titulo, $idGenero, $idAutor))
+  		echo $ISBN;
+  		echo $Titulo;
+  		echo $Autores;
+  		echo $Generos;
+
+		if(modificarLibro($ISBN, $Titulo, $Generos, $Autores))
 		{
 			$_SESSION["mensajeExito"] = "Se modificaron los datos del libro!";
 		}

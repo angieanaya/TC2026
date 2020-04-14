@@ -1,12 +1,15 @@
 <body>
+<div class="container">
 <section>
   <h2>M I &nbsp&nbsp L I B R E R Í A</h2>
 </section>
 <form method="post" >
 	<center><p>BUSCAR POR AUTOR</p></center>
-    <?=crear_select("idAutor", "Nombre", "Autores");?>
+    <?=crear_select("idAutor", "Nombre", "Autores", false);?>
     <center><p>BUSCAR POR GÉNERO</p></center>
-    <?=crear_select("idGenero", "Nombre", "Generos");?>
-            <center><input class="btn" type="submit" value="BUSCAR"></center>
+    <?=crear_select("idGenero", "Nombre", "Generos", false);?>
+    <br>
+    <center><input class="btn" type="submit" value="BUSCAR"></center>
 </form>
 <a class="btn" href="control.php">REGISTRAR</a>
+</div>

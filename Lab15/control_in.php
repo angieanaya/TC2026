@@ -2,14 +2,14 @@
   session_start();
   require_once("util.php");
 
-  $ISBN = htmlspecialchars($_POST["isbn"]);
-  $Titulo = htmlspecialchars($_POST["titulo"]);
-  $Autores = htmlspecialchars($_POST["Autores"]);
+  $ISBN = htmlspecialchars($_POST["ISBN"]);
+  $Titulo = htmlspecialchars($_POST["Titulo"]);
   $Generos = htmlspecialchars($_POST["Generos"]);
+  $Autores = htmlspecialchars($_POST["Autores"]);
 
-  if(isset($ISBN) && isset($Titulo) && isset($idGenero) && isset($idAutor))
+  if(isset($ISBN) && isset($Titulo) && isset($Generos) && isset($Autores))
   {
-    if(insertarLibro($Autores, $Generos, $ISBN, $Titulo))
+    if(insertarLibro($ISBN, $Titulo, $Generos, $Autores))
     {
       $_SESSION["mensajeExito"] = "Registro de libro exitoso!";
     }

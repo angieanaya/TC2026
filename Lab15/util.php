@@ -14,7 +14,6 @@ function closeDB($conexion_db){
    mysqli_close($conexion_db);
 }
 
-
 //Depliega todos los libros existentes con el autor y género correspondiente
 
 function consultar($Autores="", $Generos=""){
@@ -22,7 +21,7 @@ function consultar($Autores="", $Generos=""){
   
   $resultado =  "<center><table><thead><tr><th>Título</th><th>Autor</th><th>Género</th></tr></thead>";
     
-  $consulta = 'Select Titulo, A.Nombre as autorNom, G.Nombre as generoNom From Libros as L, Autores as A, Generos as G Where L.idGenero = G.idGenero AND L.idAutor = A.idAutor';
+  $consulta = 'Select ISBN, Titulo, A.Nombre as autorNom, G.Nombre as generoNom From Libros as L, Autores as A, Generos as G Where L.idGenero = G.idGenero AND L.idAutor = A.idAutor';
   
   if ($Autores != "") {
         $consulta .= " AND A.idAutor=".$Autores;
@@ -34,46 +33,62 @@ function consultar($Autores="", $Generos=""){
 
   //echo $consulta;
 
-      
-  $resultados = $conexion_db->query($consulta);  
+  $resultados = $conexion_db->query($consulta); 
+  $resultado .= "<br>"; 
   while ($row = mysqli_fetch_array($resultados, MYSQLI_ASSOC)){
         $resultado .= "<tr>";
         $resultado .= "<td>".$row['Titulo']."</td>"; //Se puede usar el índice de la consulta
         $resultado .= "<td>".$row['autorNom']."</td>"; //o el nombre de la columna
         $resultado .= "<td>".$row['generoNom']."</td>";
+        $resultado .= "<td><a class='btn' href='control_editar_libro.php?ISBN=".$row['ISBN']."' role='button'>";
+        $resultado .= "<span class='material-icons'>MOD</span></a>";
+        //esta fecha es para el id del modal de borrar
+        $tituloModal =  str_replace(' ', '', $row['Titulo']);
+        $resultado .= "<button type='button' class='btn' data-toggle='modal' data-target='#".$tituloModal."'>";
+        $resultado .= "<span class='material-icons'>DEL</span></button>";
+        include("eliminar.html");
         $resultado .= "</tr>";
   }
-    
+
   mysqli_free_result($resultados); //Liberar la memoria
 
   closeDB($conexion_db);
 
-        
-  $resultado .= "</tbody></table></center>";
+  $resultado .= "</tbody></table></center><br>";
   return $resultado;
 }
-
 
 //Crea un select con los datos de una consulta
   //@param $id: Campo en una tabla que contiene el id
   //@param $columna_descripcion: Columna de una tabla con una descripción
   //@param $tabla: La tabla a consultar en la bd
 
-  function crear_select($id, $columna_descripcion, $tabla) {
+  function crear_select($id, $columna_descripcion, $tabla, $required, $selected=0) {
     $conexion_bd = conectDB(); 
     
     $resultado = '<div class="custom-select"><select name="'.$tabla.'"><option value="" disabled selected>SELECCIONA UNA OPCIÓN</option>';
-            
+
+    if($required)
+    {
+      $resultado .= "required";
+    }
+    $resultado .= "><option value='' disabled selected>Selecciona una opción</option>";
+       
     $consulta = "SELECT $id, $columna_descripcion FROM $tabla";
     $resultados = $conexion_bd->query($consulta);
     while ($row = mysqli_fetch_array($resultados, MYSQLI_BOTH)) {
-       $resultado .= '<option value="'.$row["$id"].'">'.$row["$columna_descripcion"].'</option>';
+      $resultado .= '<option value="'.$row["$id"].'" ';
+      if($selected === $row["$id"])
+      {
+        $resultado .= "selected";
+      }
+      $resultado .= ">".$row["$columna_descripcion"]."</option>";
     }
 
     $resultado .=  '</select><label></label></div><br>';
         
     closeDB($conexion_bd);
-    
+    $resultado .= "</select><br/>";
     return $resultado;
   }
 
@@ -92,7 +107,7 @@ function consultar($Autores="", $Generos=""){
     }
 
     //Unir los parámetros
-    if (!$statement->bind_param("isii", $ISBN, $Titulo, $idAutor, $idGenero)){
+    if (!$statement->bind_param("isii", $ISBN, $Titulo, $idGenero, $idAutor)){
       die("Error en vinculación: (" . $statement->errno . ") " . $statement->error);
       return 0;
     }
