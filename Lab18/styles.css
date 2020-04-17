@@ -1,0 +1,107 @@
+header{
+	background-color: #4062BB;
+	text-align: center;
+	color: white;
+}
+h1{
+	font-family: 'Baloo Da', cursive;
+	font-size: 45px;
+}
+h2{
+	font-family: 'Baloo Da', cursive;
+	font-size: 35px;
+	text-align: center;
+	background-color: #748CCD;
+  color: white;
+}
+h3{
+	font-family: 'Baloo Da', cursive;
+	font-size: 20px;
+	text-align: left;
+	padding-left: 10px;
+}
+h4{
+	font-family: 'Baloo Da', cursive;
+	font-size: 20px;
+	text-align: center;
+  margin-bottom: 2px;
+}
+p{
+  padding-left: 10px;
+}
+#tableQ{
+	border-radius: 2px;
+}
+body{
+	background-color: #DCE2F2;
+}
+th{
+	background-color:black;
+  color: white;
+}
+td{
+	border: 0.5px solid white;
+  background-color:black;
+  color: white;
+  padding: 5px;
+}
+p{
+	font-family: 'Montserrat', cursive;
+}
+ol{
+	font-family: 'Montserrat', cursive;
+}
+li{
+	font-family: 'Montserrat', cursive;
+	padding: 5px;
+}
+strong{
+	font-family: 'Montserrat', sans-serif;
+}
+footer{
+	background-color: #4062BB;
+	color: white;
+	padding:10px;
+	text-align: center;
+}
+.btn {
+  background-color: #748CCD;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  border-radius: 2px;
+}
+
+.btn:hover{
+  background-color: #4062BB;
+  color: white;
+  border: none;
+  box-shadow: 0 5px 10px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+select{
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+  display: hidden;
+  
+}
+input[type=text]{
+  width: 100%;
+  padding: 8px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+input[type=number]{
+  width: 100%;
+  padding: 8px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
