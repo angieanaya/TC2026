@@ -30,6 +30,9 @@ function buscar() {
                     // Se recibió la respuesta asíncrona, entonces hay que actualizar el cliente.
                     // A esta parte comúnmente se le conoce como la función del callback
                     document.getElementById("resultados_consulta").innerHTML = request.responseText;
+                    /*var ajaxResponse=document.getElementById('ajaxResponse');
+                    ajaxResponse.innerHTML=request.responseText;
+                    ajaxResponse.style.visibility="visible";*/
                 }
             };
         // Limpiar la petición
@@ -39,3 +42,43 @@ function buscar() {
 }
 
 document.getElementById("buscar").onclick = buscar;
+
+
+function sendRequest(tabla)
+{
+  request = getRequestObject();
+  if(request != null)
+  {
+    let userInput = document.getElementById("userInput"+tabla);
+
+    let url = 'ssajax.php?tabla='+tabla+'&pattern='+userInput.value;
+
+    request.open('GET', url, true);
+    request.onreadystatechange = 
+      function(){
+        if(request.readyState == 4)
+        {
+          let ajaxResponse = document.getElementById("ajaxResponse"+tabla);
+
+          ajaxResponse.innerHTML = request.responseText;
+          ajaxResponse.style.visibility = "visible";
+        }
+      };
+    request.send(null);
+  }
+}
+
+function selectValue(tabla) {
+
+   let list=document.getElementById("list");
+   //nombrar variables del form de esta manera 
+   let userInput=document.getElementById("userInput" + tabla); 
+   let input = document.getElementById(tabla);
+   let ajaxResponse=document.getElementById("ajaxResponse"+ tabla);
+
+   userInput.value=list.options[list.selectedIndex].text;
+   input.value = list.options[list.selectedIndex].value;
+   ajaxResponse.style.visibility="hidden";
+   userInput.focus();
+}
+

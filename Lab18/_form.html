@@ -3,6 +3,13 @@
 <section>
   <h2>M I &nbsp&nbsp L I B R E R Í A</h2>
 </section>
+<br>
+<center><p>BÚSQUEDA POR TÍTULO</p></center>
+<input type="text"  id="userInputLibros" onkeyup="sendRequest('Libros')" placeholder="Hush hush">
+<div id="ajaxResponseLibros"></div>
+<br>
+<p>ISBN: <input type="visible" name="Libros" id="Libros" value=""></p>
+<br>
 <center><p>BUSCAR POR AUTOR</p></center>
 <?=crear_select("idAutor", "Nombre", "Autores", false);?>
 <center><p>BUSCAR POR GÉNERO</p></center>

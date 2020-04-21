@@ -27,6 +27,7 @@ echo consultar($Autores,$Generos);
 echo '</div>';
 
 include("eliminar.html");
+include("componentesAjax.html");
 include("preguntas.html"); 
 include("footer.html"); 
 ?>

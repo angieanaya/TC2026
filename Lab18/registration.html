@@ -7,6 +7,15 @@
 	<h2>INSERTAR LIBRO</h2>	
 <?php endif;?>
 
+	<!--ISBN-->
+	<?php if(isset($editar)): ?>
+		<input type="hidden" name="ISBN" value="<?=$ISBN?>">
+	<?php else: ?>
+		<center><label for="ISBN">I S B N</label><center>
+		<input type="number" id="ISBN" name="ISBN" placeholder="0000000001" required>
+	<?php endif; ?>
+
+	<!--TITULO-->
 	<center><label for="Titulo">T I T U L O</label></center>
 	<?php if(isset($Titulo)): ?>
 	<input class="textInput" type="text" id="Titulo" name="Titulo" placeholder="Hush Hush" value="<?= $Titulo?>" required>
@@ -32,14 +41,6 @@
 		<?= crear_select("idGenero", "Nombre", "Generos", true, $idGenero); ?>
 	<?php else: ?>
 		<?= crear_select("idGenero", "Nombre", "Generos", true); ?>
-	<?php endif; ?>
-
-	
-	<?php if(isset($editar)): ?>
-		<input type="hidden" name="ISBN" value="<?=$ISBN?>">
-	<?php else: ?>
-		<center><label for="ISBN">I S B N</label><center>
-		<input type="number" id="ISBN" name="ISBN" required>
 	<?php endif; ?>
 	<br/>
 	<br/>

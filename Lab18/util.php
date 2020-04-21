@@ -195,5 +195,25 @@ function consultar($Autores="", $Generos=""){
     closeDB($conexion_bd);
     return 1;
   }
+
+  function obtenerLibros($tabla, $campo){
+    $conexion_bd = conectDB();
+
+    $array = "";
+    $consulta = 'SELECT '.$campo.' FROM '.$tabla;
+
+    $resultados = $conexion_bd->query($consulta);
+    while ($row = mysqli_fetch_array($resultados, MYSQLI_BOTH)){
+      $array .= $row["$campo"].",";
+    }
+
+    mysqli_free_result($resultados);
+
+    closeDB($conexion_bd);
+
+    $array = explode(",", $array);
+    return $array;
+  }
 ?>
+
 
