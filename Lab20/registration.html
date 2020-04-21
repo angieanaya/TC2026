@@ -1,0 +1,53 @@
+<div class="container"> 
+<?php if(isset($editar)): ?>
+	<form method="POST" action="control_actualizar.php">
+	<h2>MODIFICAR LIBRO</h2>
+<?php else: ?>
+	<form method="POST" action="control_in.php">
+	<h2>INSERTAR LIBRO</h2>	
+<?php endif;?>
+
+	<center><label for="Titulo">T I T U L O</label></center>
+	<?php if(isset($Titulo)): ?>
+	<input class="textInput" type="text" id="Titulo" name="Titulo" placeholder="Hush Hush" value="<?= $Titulo?>" required>
+	<?php else: ?>
+		<input class="textInput" type="text" id="Titulo" name="Titulo" placeholder="Hush Hush" value="" required>
+	<?php endif; ?>
+	<br/>
+	<br/>
+	
+	<!--AUTORES-->
+	<center><label for="idAutor">A U T O R E S</label></center>
+	<br>
+	<?php if(isset($idAutor)): ?>	
+		<?= crear_select("idAutor", "Nombre", "Autores", true, $idAutor); ?>
+	<?php else: ?>
+		<?= crear_select("idAutor", "Nombre", "Autores", true); ?>
+	<?php endif; ?>
+	
+	<!--GENEROS-->
+	<center><label for="idGenero">G É N E R O S</label></center>
+    <br>
+	<?php if(isset($idGenero)): ?>	
+		<?= crear_select("idGenero", "Nombre", "Generos", true, $idGenero); ?>
+	<?php else: ?>
+		<?= crear_select("idGenero", "Nombre", "Generos", true); ?>
+	<?php endif; ?>
+
+	
+	<?php if(isset($editar)): ?>
+		<input type="hidden" name="ISBN" value="<?=$ISBN?>">
+	<?php else: ?>
+		<center><label for="ISBN">I S B N</label><center>
+		<input type="number" id="ISBN" name="ISBN" required>
+	<?php endif; ?>
+	<br/>
+	<br/>
+	<center><input class="btn" type="submit" value="REGISTRAR LIBRO"></center>
+	<br/>
+	<a class='btn' href='index.php' role='button'>REGRESAR</a>
+	<br/>
+</form>
+
+</div>
+

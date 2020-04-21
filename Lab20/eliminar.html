@@ -1,0 +1,27 @@
+<!-- Modal -->
+<div class="modal fade" id="<?= $tituloModal ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+	  <div class="modal-content">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-label="Close">X</button>
+		</div>
+		<div class="modal-body">
+			<div class="alert alert-danger" role="alert">
+				<h4 class="alert-heading">¿Estás seguro de que deseas eliminar este libro?</h4>
+			</div>
+			
+			<ul>
+				<li><strong>ISBN: </strong><?= $row['ISBN'] ?></li>
+				<li><strong>Titulo: </strong><?= $row['Titulo'] ?></li>
+				<li><strong>Autor: </strong><?= $row['autorNom'] ?></li>
+				<li><strong>Género: </strong><?= $row['generoNom'] ?></li>
+			</ul>
+			
+		</div>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-dismiss="modal">CANCELAR</button>
+		  <a class='btn btn-danger' href="control_eliminar_libro.php?ISBN=<?=$row['ISBN'] ?>" role='button'>ELIMINAR</a>
+		</div>
+	  </div>
+	</div>
+  </div>
