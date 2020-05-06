@@ -1,0 +1,27 @@
+ <div class="container">
+    <form method="POST" action="controlador_registrarIncidente.php">
+    <br/>
+	<br/>
+    <!-- SELECT PARA LOS LUGARES -->
+	<?php if(isset($idLugar)): ?>
+		<?=crear_selectT("idLugar", "nomLugar", "lugares", false, $idLugar, "L U G A R", true);?>
+	<?php else: ?>
+		<?=crear_selectT("idLugar", "nomLugar", "lugares", false, "", "L U G A R", true);?>
+	<?php endif;?>
+	<br/>
+	<br/>
+	<!-- SELECT PARA EL TIPO DE INCIDENTE-->
+	<?php if(isset($idTipo)): ?>
+		<?=crear_selectT("idTipo", "nomTipo", "tipos", false, $idTipo, "T I P O", true);?>
+	<?php else: ?>
+		<?=crear_selectT("idTipo", "nomTipo", "tipos", false, "", "T I P O", true);?>
+	<?php endif;?>
+	<br/>
+	<br/>
+	<center><input class="btn" type="submit" value="REGISTRAR INCIDENTE"></center>
+	<br/>
+	<a class='btn' href='index.php' role='button'>REGRESAR</a>
+	<br/>
+	<br/>
+	</form>
+</div>

@@ -1,0 +1,19 @@
+<body>
+	<div class="container">
+		<!-- BOTON PARA REGISTRAR NUEVO INCIDENTE -->
+		<a class="btn" href="controlador_insertarIncidente.php">REGISTRAR</a>
+		<br>
+		<br>
+		<!-- SELECTOR PARA HACER BUSQUEDA POR LUGARES -->
+		<?=crear_selectT("idLugar", "nomLugar", "lugares", false, "", "BUSCAR POR LUGAR");?>
+		<br>
+		<br>
+		<!-- SLECTOR PARA HACER BUSQUEDA POR TIPOS DE INCIDENTE -->
+		<?=crear_selectT("idTipo", "nomTipo", "tipos", false, "", "BUSCAR POR TIPO");?>
+		<br>
+		<br>
+		<!-- BOTON QUE ACTIVA LA PETICION ASINCRONA -->
+		<center><button id="buscar" class="btn">BUSCAR</button></center>
+		<br>
+		<br>
+	</div>
