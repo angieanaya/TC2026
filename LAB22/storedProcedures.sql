@@ -12,12 +12,12 @@ DELIMITER ;
 /* STORED PROCEDURE 2 */
 DROP PROCEDURE IF EXISTS `modificaLibro`;
 DELIMITER //
-CREATE PROCEDURE `modificaLibro` (uISBN INT(11), uTitulo VARCHAR(50), uidGenero
-INT(11), uidAutor INT(11))
+CREATE PROCEDURE `modificaLibro`(uISBN INT(11), uTitulo VARCHAR(50), uidGenero INT(11), uidAutor INT(11))
 BEGIN
-  UPDATE Libros VALUES(uTitulo, uidGenero, uidAutor) WHERE ISBN = uISBN;
+	UPDATE Libros SET Titulo = uTitulo, idGenero = uidGenero, idAutor = uidAutor WHERE ISBN = uISBN;
 END //
 DELIMITER ;
+
 
 /* STORED PROCEDURE 3 */
 DROP PROCEDURE IF EXISTS `eliminaLibro`;
